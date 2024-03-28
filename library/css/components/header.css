@@ -7,9 +7,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-
 }
-
 
 .ui.header .darkmode {
   display: flex;
@@ -46,7 +44,7 @@
   cursor: pointer;
 }
 
-.ui.header>.ui.main-head>.upperleft {
+.ui.header > .ui.main-head > .upperleft {
   display: flex !important;
   flex-direction: row;
   gap: 5%;
@@ -73,7 +71,7 @@
   cursor: pointer;
 }
 
-.ui.header>.upper-head>.left-container {
+.ui.header > .upper-head > .left-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -82,12 +80,10 @@
   column-gap: 2rem;
 }
 
-.ui.header>.upper-head>.left-container>a {
+.ui.header > .upper-head > .left-container > a {
   color: #232323;
   text-decoration: none;
-
 }
-
 
 .ui.header .right-container {
   display: flex;
@@ -115,7 +111,7 @@
   flex-direction: row;
 }
 
-.language>a:hover {
+.language > a:hover {
   cursor: pointer;
 }
 
@@ -162,15 +158,9 @@
 
 .ui.header .logo {
   position: relative;
-  left: 85%;
-  transform: translateX(-50%);
   width: 100%;
   max-width: 25rem;
   cursor: pointer;
-
-
-
-
 }
 
 .ui.header.department .main-head {
@@ -218,15 +208,11 @@
   display: none;
 }
 
-
-
-
-
 .logo-link {
   width: 70px;
 }
 
-.dark .ui.main-head>.logo>img {
+.dark .ui.main-head > .logo > img {
   content: url("http://cmsredesign.channeli.in/library/assets/images/IITRLogo.png");
 }
 
@@ -263,23 +249,21 @@
 
   .ui.header .hamburger-container {
     display: unset;
-    
   }
   .ui.header .hamburger-container img {
     padding-left: 20px;
-   
-    margin-left: -10px; 
+
+    margin-left: -10px;
   }
-  
+
   .ui.header .logo {
     position: relative;
     left: 80%;
-
+    transform: translateX(-50%);
 
     width: 100%;
     max-width: 20rem;
     margin: 10px;
-
   }
 
   .ui.header .main-head {
@@ -287,8 +271,6 @@
     justify-content: start;
     align-items: center;
   }
-
-  
 
   .ui.header.department .main-head {
     display: flex;
@@ -317,15 +299,11 @@
     gap: 0.25rem;
   }
 
-  
   .logo-link {
     width: 40px;
     /* margin-right: -600px;
    */
-    
-   
   }
-  
 }
 
 .pagination-container {
@@ -363,33 +341,22 @@
   display: none;
 }
 
-@media only screen and (max-width:750px) {
+@media only screen and (max-width: 750px) {
   .ui.header .logo {
     position: relative;
     left: 70%;
     width: 15rem;
-
-
   }
   .ui.header.department .main-head {
     /* margin-left: 6rem; */
-    gap:40%;
-
-   
+    gap: 40%;
   }
-
-  
 }
-@media only screen and (max-width:600px) {
- 
+@media only screen and (max-width: 600px) {
   .ui.header.department .main-head {
     margin-left: 0rem;
-    gap:30%;
-
-   
+    gap: 30%;
   }
-
-  
 }
 
 @media only screen and (max-width: 500px) {
@@ -404,13 +371,8 @@
     width: 10rem;
   }
 
- 
-
- 
   .ui.header.department .main-head {
     margin-left: 0rem;
-    gap:15%;
-
-   
+    gap: 15%;
   }
 }
