@@ -159,10 +159,21 @@ window.addEventListener("load", function (e) {
         reorderSlides(hash, sliderMap[hash], false)
       }
     })
+   
 
     intervalID = setInterval(() => {
       reorderSlides(hash, sliderMap[hash], false)
     }, 4000)
+    container.addEventListener("mouseenter", function () {
+      clearInterval(intervalID); 
+    });
+
+    container.addEventListener("mouseleave", function () {
+      intervalID = setInterval(() => {
+        reorderSlides(hash, sliderMap[hash], false); 
+      }, 4000);
+    });
+
     images = container.querySelectorAll("img")
     loadedImageCounter = 0
     images.forEach(function (image) {
@@ -175,6 +186,7 @@ window.addEventListener("load", function (e) {
         }
       })
     })
+    
     renderSlides(hash, sliderMap[hash])
     sliderMap[hash] = numberOfCardsToDisplay(hash)
     renderSlides(hash, sliderMap[hash])
