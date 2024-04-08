@@ -14,24 +14,44 @@ function makeHash(length) {
   }
   return result
 }
+let intervalID
+
 
 // THIS FUNCTION REORDERS SLIDES by either inserting the last slide to first or
 // first slide to last
 const reorderSlides = (sliderHash, numCards, isLeft) => {
-  const sliderElement = document.getElementById(sliderHash)
-  const container = sliderElement.getElementsByClassName("container")[0]
-  const cards = container.children
+  if (intervalID) clearInterval(intervalID);
 
-  const totalNumberOfCards = cards.length
+  const sliderElement = document.getElementById(sliderHash);
+  const container = sliderElement.getElementsByClassName("container")[0];
+  const cards = container.children;
+
+  const totalNumberOfCards = cards.length;
 
   if (numCards < 1) {
-    return
+    return;
   }
 
-  // Reorder
-  if (isLeft) {
-    // Put last card to the top
-    if (totalNumberOfCards <= numCards) {
+  // Calculate animation step and direction
+  const cardWidth = cards[0].offsetWidth;
+  const animationStep = isLeft ? cardWidth : -cardWidth;
+
+  let currentPosition = 0;
+  let newPosition = currentPosition + animationStep;
+
+  const animationDuration = 500; 
+  const framesPerSecond = 60;
+  const totalFrames = Math.ceil(animationDuration / (1000 / framesPerSecond));
+  const frameStep = animationStep / totalFrames;
+
+  const animate = () => {
+    currentPosition += frameStep;
+    container.style.transform = `translateX(${currentPosition}px)`;
+
+    if (currentPosition === newPosition) {
+      if (isLeft) {
+
+           if (totalNumberOfCards <= numCards) {
       return
     }
     if (totalNumberOfCards > numCards) {
@@ -44,24 +64,40 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
       lastCard.style.display = "block"
     }
     container.insertBefore(lastCard, container.firstChild)
-  } else {
-    if (totalNumberOfCards <= numCards) {
-      return
+        
+
+        
+      } else {
+        if (totalNumberOfCards <= numCards) {
+          return
+        }
+        // Put first card to the bottom
+        const firstChild = cards[0]
+        if (totalNumberOfCards > numCards) {
+          firstChild.style.display = "none"
+        }
+        cards[numCards].style.display = "block"
+        if (cards[numCards].classList.contains("image-description-card")) {
+          cards[numCards].style.display = "flex"
+        } else {
+          cards[numCards].style.display = "block"
+        }
+        container.appendChild(firstChild)
+        
+      
+      }
+      container.style.transform = "translateX(0)";
+      return;
     }
-    // Put first card to the bottom
-    const firstChild = cards[0]
-    if (totalNumberOfCards > numCards) {
-      firstChild.style.display = "none"
-    }
-    cards[numCards].style.display = "block"
-    if (cards[numCards].classList.contains("image-description-card")) {
-      cards[numCards].style.display = "flex"
-    } else {
-      cards[numCards].style.display = "block"
-    }
-    container.appendChild(firstChild)
-  }
-}
+
+    requestAnimationFrame(animate);
+  };
+
+  animate();
+  intervalID = setInterval(() => {
+    reorderSlides(sliderHash, numCards, false);
+  }, 4000);
+};
 
 const renderSlides = (hash, numberOfCards) => {
   const sliderElement = document.getElementById(hash)
@@ -103,7 +139,7 @@ const numberOfCardsToDisplay = (sliderHash) => {
 }
 
 const sliderMap = {}
-let intervalID
+
 
 window.addEventListener("load", function (e) {
   const sliders = document.querySelectorAll(".ui.slider")
@@ -230,4 +266,24 @@ window.onresize = () => {
 
     renderSlides(hash, sliderMap[hash])
   }
+  
 }
+
+const debounce = (func, delay) => {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
+
+
+const debouncedReload = debounce(() => {
+  location.reload();
+}, 500);
+
+window.addEventListener("resize", function() {
+  debouncedReload();
+});
