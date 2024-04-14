@@ -39,10 +39,11 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   let currentPosition = 0;
   let newPosition = currentPosition + animationStep;
 
-  const animationDuration = 500; 
+  const animationDuration = 700; 
   const framesPerSecond = 60;
-  const totalFrames = Math.ceil(animationDuration / (1000 / framesPerSecond));
+  const totalFrames = Math.ceil(animationDuration / (700 / framesPerSecond));
   const frameStep = animationStep / totalFrames;
+  
 
   const animate = () => {
     currentPosition += frameStep;
@@ -87,6 +88,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
       
       }
       container.style.transform = "translateX(0)";
+      
       return;
     }
 
@@ -150,6 +152,8 @@ window.addEventListener("load", function (e) {
 
     const container = document.createElement("div")
     container.className = "container"
+    // container.style.overflow = "hidden";
+    // container.style.whiteSpace = "nowrap"; 
 
     let card = sliders[i].firstChild
 
@@ -160,6 +164,8 @@ window.addEventListener("load", function (e) {
 
     const leftArrowContainer = document.createElement("div")
     leftArrowContainer.className = "left-arrow-container"
+    container.className = "container"
+    
 
     const leftArrowElement = document.createElement("img")
     leftArrowElement.className = "arrow"
