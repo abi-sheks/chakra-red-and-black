@@ -20,7 +20,7 @@ let intervalID
 // THIS FUNCTION REORDERS SLIDES by either inserting the last slide to first or
 // first slide to last
 const reorderSlides = (sliderHash, numCards, isLeft) => {
-  if (intervalID) clearInterval(intervalID);
+  
 
   const sliderElement = document.getElementById(sliderHash);
   const container = sliderElement.getElementsByClassName("container")[0];
@@ -43,13 +43,20 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   const framesPerSecond = 60;
   const totalFrames = Math.ceil(animationDuration / (700 / framesPerSecond));
   const frameStep = animationStep / totalFrames;
+  let animationStopped = false; // Flag to track animation state
+
   
 
   const animate = () => {
+    if (!animationStopped) {
     currentPosition += frameStep;
     container.style.transform = `translateX(${currentPosition}px)`;
+    
+  
 
-    if (currentPosition === newPosition) {
+
+    if (Math.abs(currentPosition) >= Math.abs(animationStep)) {
+     
       if (isLeft) {
 
            if (totalNumberOfCards <= numCards) {
@@ -88,17 +95,21 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
       
       }
       container.style.transform = "translateX(0)";
+      currentPosition = 0;
+        animationStopped = true; // Pause animation after completing a cycle
+       
       
       return;
     }
+    }
 
-    requestAnimationFrame(animate);
+    if (Math.abs(currentPosition) < Math.abs(animationStep)) {
+      requestAnimationFrame(animate);
+    }
   };
 
   animate();
-  intervalID = setInterval(() => {
-    reorderSlides(sliderHash, numCards, false);
-  }, 4000);
+  
 };
 
 const renderSlides = (hash, numberOfCards) => {
@@ -149,18 +160,20 @@ window.addEventListener("load", function (e) {
     const hash = makeHash(10)
     sliders[i].id = hash
     sliderMap[hash] = 1
+    const outerContainer = document.createElement("div")
+    outerContainer.className = "outer-container"; 
 
     const container = document.createElement("div")
     container.className = "container"
-    // container.style.overflow = "hidden";
-    // container.style.whiteSpace = "nowrap"; 
-
+   
     let card = sliders[i].firstChild
 
     while (card) {
       container.appendChild(card)
       card = sliders[i].firstChild
     }
+    
+
 
     const leftArrowContainer = document.createElement("div")
     leftArrowContainer.className = "left-arrow-container"
@@ -179,17 +192,23 @@ window.addEventListener("load", function (e) {
     rightArrowElement.className = "arrow"
     rightArrowElement.setAttribute("src", rightArrow)
     rightArrowContainer.appendChild(rightArrowElement)
+    outerContainer.appendChild(container) 
 
     sliders[i].appendChild(leftArrowContainer)
-    sliders[i].appendChild(container)
+    // sliders[i].appendChild(container)
+    sliders[i].appendChild(outerContainer);
     sliders[i].appendChild(rightArrowContainer)
-
+    
+    
     leftArrowElement.addEventListener("click", function (e) {
       e.stopPropagation()
       e.preventDefault()
 
       if (e.target) {
-        reorderSlides(hash, sliderMap[hash], true)
+        reorderSlides(hash, sliderMap[hash], false)
+        clearInterval(intervalID);
+
+   
       }
     })
 
@@ -198,23 +217,18 @@ window.addEventListener("load", function (e) {
       e.preventDefault()
 
       if (e.target) {
-        reorderSlides(hash, sliderMap[hash], false)
+        reorderSlides(hash, sliderMap[hash], true)
+        clearInterval(intervalID);
+       
+    
+    
       }
     })
    
 
-    intervalID = setInterval(() => {
-      reorderSlides(hash, sliderMap[hash], false)
-    }, 4000)
-    container.addEventListener("mouseenter", function () {
-      clearInterval(intervalID); 
-    });
-
-    container.addEventListener("mouseleave", function () {
-      intervalID = setInterval(() => {
-        reorderSlides(hash, sliderMap[hash], false); 
-      }, 4000);
-    });
+   
+  
+   
 
     images = container.querySelectorAll("img")
     loadedImageCounter = 0
@@ -232,13 +246,21 @@ window.addEventListener("load", function (e) {
     renderSlides(hash, sliderMap[hash])
     sliderMap[hash] = numberOfCardsToDisplay(hash)
     renderSlides(hash, sliderMap[hash])
+    startAutoSlide(hash, sliderMap[hash]);
   }
 })
+
 
 window.addEventListener("beforeunload", function () {
   // Clear any intervals here
   if (intervalID) clearInterval(intervalID)
 })
+const startAutoSlide = (sliderHash, numCards) => {
+  intervalID = setInterval(() => {
+    reorderSlides(sliderHash, numCards, false);
+  }, 8000);
+};
+
 
 var observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutationRecord) {

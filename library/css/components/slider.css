@@ -2,26 +2,30 @@
     display: grid;
     grid-template: 1fr / 5vw 1fr 5vw;
     max-width: 100% !important;
-    overflow: hidden  !important;
-    white-space: nowrap;
+    overflow: hidden;
 }
 .ui.slider > div{
     max-width: 100%;
 }
+.ui.slider .outer-container{
+    
+    overflow: hidden;
+    display: flex; /* Add flex display to outer-container */
+    align-items: center; /* Align items horizontally */
+}
+
 
 .ui.slider .container{
-    max-width: 100% !important;
-    overflow: hidden; 
- 
+    width: 100%; 
+   
+    display: flex;
+    justify-content: space-evenly;
     
-}
-
-
-
-.ui.slider.container > * {
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+    align-items: center;
+    flex-wrap: nowrap; 
 }
 .ui.slider > * > *{
+    
     margin: 10px;
 }
 .ui.slider > .left-arrow-container {
@@ -29,16 +33,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease-in-out;
-    
 }
 
 .ui.slider > .container {
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    
+}
+.ui.slider .container > * {
+    margin-right: 40px
 }
 
 .ui.slider > .right-arrow-container {
