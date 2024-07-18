@@ -1,0 +1,13 @@
+.ui.rank-card {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ui.rank-card .icon {
+    height: 11rem;
+    width: 11rem;
+}
+
