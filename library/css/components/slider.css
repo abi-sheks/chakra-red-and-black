@@ -59,3 +59,24 @@
 .ui.slider > .right-arrow-container > .arrow:hover {
     cursor: pointer;
 }
+
+.ui.slider .image-card {
+    background-color: var(--black);
+}
+
+.ui.slider .image-card .content .sub-heading {
+    font-weight: 600;
+    color: var(--white);
+    opacity: 0.87;
+}
+
+.ui.slider .image-card .content .intro-text {
+    font-weight: 400;
+    color: var(--light-grey);
+    opacity: 0.8;
+}
+
+.ui.slider .image-card .content a {
+    display: none;
+}
+

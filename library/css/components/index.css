@@ -69,4 +69,7 @@ body {
   .blue-grey {
     background-color: var(--very-gery-blue);
   }
+  .bg-yellow {
+    background-color: var(--bg-yellow);
+  }
   
