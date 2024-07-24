@@ -11,3 +11,16 @@
     width: 11rem;
 }
 
+.ui.rank-card .intro-text {
+    color: var(--black) !important;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+}
+
+.ui.rank-card .sub-heading {
+    font-family: var(--font-lato);
+    font-size: 70px;
+    font-weight: 900;
+    text-shadow: 5px 5px #fbd880;
+}

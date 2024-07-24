@@ -173,7 +173,11 @@ const paths = {
   website :'library/assets/icons/website.svg',
   accessibility_telegram_logo: 'library/assets/icons/accessibility-telegram.svg', // Remove option from frontend
   telegram_logo: 'library/assets/icons/telegram-logo.svg',
-  leftarrow: 'library/assets/icons/left-arrow.svg'
+  leftarrow: 'library/assets/icons/left-arrow.svg',
+  architecture: 'library/assets/icons/architecture.svg',
+  engineering: 'library/assets/icons/engineering.svg',
+  india_gate: 'library/assets/icons/india_gate.svg',
+  globe: 'library/assets/icons/globe.svg'
 }
 
 /* <img class="ui icon" data-icon=""/> */
