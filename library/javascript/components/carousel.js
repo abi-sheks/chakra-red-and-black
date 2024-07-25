@@ -5,6 +5,7 @@ function activateCarousel(carousel) {
   // GOT TO REMOVE PADDING AND MARGIN FROM FULL WIDTH CONTAINER MANUALLY
   // HERE! Don't change
 
+  if(parentContainer.className.split(" ").indexOf("full-width-container") != -1)
   parentContainer.className = ''
 
   generateNavigator()

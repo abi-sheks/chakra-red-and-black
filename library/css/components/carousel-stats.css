@@ -1,0 +1,35 @@
+.ui.carousel-stats {
+    position: relative;
+}
+
+.ui.carousel-stats > .ui.flexbox {
+    justify-content: center;
+    z-index: 200;
+    position: relative;
+    bottom: 2rem;
+}
+
+.ui.carousel-stats  > .ui.flexbox > .ui.stats-card {
+    height : 9.75rem;
+    width : 12rem;
+    margin: 0rem;
+}
+
+.ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.one-liner-captions, 
+.ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.sub-heading {
+    color: var(--black);
+}
+
+.ui.carousel-stats .ui.flexbox .ui.stats-card.black .ui.one-liner-captions,
+.ui.carousel-stats .ui.flexbox .ui.stats-card.black .ui.sub-heading   {
+    color: var(--white);
+}
+
+.ui.carousel-stats .ui.flexbox .ui.stats-card img {
+    height: 5rem;
+    width: 7.625rem;
+}
+
+.ui.carousel-stats > .ui.flexbox > .ui.stats-card.black > img {
+    filter: invert(100%);
+}
