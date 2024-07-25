@@ -43,6 +43,8 @@
 @import url(./menu.css);
 @import url(./nested-vertical-list.css);
 @import url(./faculty-profile.css);
+@import url(./rank-card.css);
+@import url(./carousel-stats.css);
 
 /* @import url(./menu_test.css); */
 
@@ -67,5 +69,11 @@ body {
   }
   .blue-grey {
     background-color: var(--very-gery-blue);
+  }
+  .bg-yellow {
+    background-color: var(--bg-yellow);
+  }
+  .black { 
+    background-color: var(--black);
   }
   
