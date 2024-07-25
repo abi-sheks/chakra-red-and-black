@@ -3,29 +3,45 @@
     background-color: inherit;
 }
 .ui.list.list-bluebg {
-    background-color: var(--grey-blue);
+    background-color: pink;
 }
 
 .ui.list > .listItem {
     margin-bottom:0.625rem;
     line-height: 1.3;
+    margin-left: 50px;
 }
 
 .ui.list > .listItem > .ui.sub-heading {
     font-size: 1rem;
+    font-weight: bold;
     padding: 0.625rem;
+    color: black;
 }
 
 .ui.list > .listItem > .ui.intro-text {
     padding: 0 0.625rem 0.625rem 0.625rem;    
-    font-size: 0.875rem;
+    font-size: 20px;
+    width: 80%;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ui.list > .listItem > .ui.one-liner-captions {
+    padding: 0 0.625rem 0.625rem 0.625rem;    
+    font-size: 20px;
+    width: 80%;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .ui.list > .listItem > .divider{
-    width: 100%;
+    width: 80%;
+    margin-left: 20px;
     /* DO NOT change this height value. This is cursed. Especially the 1.5px value */
-    height: 1px;
-    background-color: var(--formal-blue);
+    height: 2px;
+    background-color: orange;
 }
 
 
