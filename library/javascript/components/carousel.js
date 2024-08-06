@@ -6,7 +6,14 @@ function activateCarousel(carousel) {
   // HERE! Don't change
 
   if(parentContainer.className.split(" ").indexOf("full-width-container") != -1)
-  parentContainer.className = ''
+  {
+    parentContainer.className = ''
+  }
+
+  if(parentContainer.className.split(" ").indexOf("carousel-stats") != -1)
+  {
+    parentContainer.parentElement.className = ''
+  }
 
   generateNavigator()
   generateDots(slides.length)
