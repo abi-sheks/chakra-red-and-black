@@ -195,3 +195,20 @@
     margin-right: 5px;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .ui.tabs-container.event {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  .ui.tabs-container.event > .tabs {
+    width: 70%;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+  .ui.tabs-container.event > .tabs::-webkit-scrollbar {
+    display: none;
+  }
+}
