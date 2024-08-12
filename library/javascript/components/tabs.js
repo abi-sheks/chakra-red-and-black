@@ -11,8 +11,34 @@ function makeid(length) {
 
 var tabsContainers = document.querySelectorAll('.ui.tabs-container')
 for (var i = 0; (tabsContainers !== null) && (i < tabsContainers.length); i++) {
-
-
+    
+    
+    //append dot containers for milestone tabs
+    if(tabsContainers[i].className.split(" ").indexOf("milestone") != -1)
+    {
+        if(tabsContainers[i].children !== null)
+        {
+            const tabsList = tabsContainers[i].getElementsByClassName("tabs")
+            if(tabsList !== null)
+            {
+                const tabs = tabsList[0]
+                if(tabs !== null)
+                {
+                    const tabList = tabs.getElementsByClassName("tab")
+                    if(tabList)
+                    {
+                        const size = tabList.length
+                        for(var j = 0; j < size; j++)
+                        {
+                            const dotContainer = document.createElement("div")
+                            dotContainer.className = "ms-dot"
+                            tabList[j].appendChild(dotContainer)
+                        }
+                    } 
+                }
+                }
+        }   
+    }
     // Assign IDs
     const tabsHash = makeid(15)
     var tabIterator = 0;
