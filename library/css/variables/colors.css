@@ -17,7 +17,9 @@
   --light-grey: #f7f7f7;
   --yellow: #ffd53d;
   --bg-yellow: #e6a600;
-  --primary: #E9FF92;
+  /* --primary: #E9FF92; */
+  --primary: #750014;
+  /* --primary: var(--formal-blue); */
   --caption-grey: #999999;
   --hover-black: #181818;
   --very-gery-blue: #cfdbe6;
@@ -45,6 +47,8 @@
   --light-grey: #111111;
   --yellow: #ffd53d;
   --primary: #E9FF92;
+  /* --primary: #750014; */
+  /* --primary: #81dbfe; */
   --caption-grey: #999999;
   --hover-black: #f7f7f7;
   --very-gery-blue: #4C4C4C;

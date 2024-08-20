@@ -3,7 +3,7 @@
     background-color: inherit;
 }
 .ui.list.list-bluebg {
-    background-color: pink;
+    background-color: var(--primary);
 }
 
 .ui.list > .listItem {
@@ -41,7 +41,7 @@
     margin-left: 20px;
     /* DO NOT change this height value. This is cursed. Especially the 1.5px value */
     height: 2px;
-    background-color: orange;
+    background-color: var(--black);
 }
 
 
