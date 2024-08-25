@@ -2,7 +2,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid var(--primary);
+  border-bottom: 1px solid var(--black);
   /* padding-bottom: 15px; */
   display: flex;
   flex-direction: column;
@@ -44,16 +44,6 @@
   cursor: pointer;
 }
 
-.ui.header {
-  /* hardcode */
-  background-color: #222222;
-}
-
-/* todo: rework dark mode */
-.light .ui.header > .ui.main-head > .logo > img {
-  filter: invert(100%);
-}
-
 .ui.header > .ui.main-head > .upperleft {
   display: flex !important;
   flex-direction: row;
@@ -91,7 +81,8 @@
 }
 
 .ui.header > .upper-head > .left-container > a {
-  color: #232323;
+  /* color: #232323; */
+  color : #ffffff;
   text-decoration: none;
 }
 
@@ -146,7 +137,7 @@
 .ui.header .main-head {
   width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-self: center;
   margin-top: 1rem;
@@ -157,9 +148,21 @@
   display: flex;
   justify-content: space-between;
   /* background: rgba(229, 238, 244, 0.49); */
+  background-color: var(--primary); 
   align-content: center;
   padding: 0.5rem 10%;
 }
+
+.light .ui.header > .upper-head > .right-container > .accessibility > .sizechange > div > img,
+.light .ui.header > .upper-head > .right-container > .accessibility > .page-search > img {
+  filter: invert(100%);
+}
+
+.ui.header > .upper-head > .right-container > .accessibility > .page-options > span > a {
+  /* always white */
+  color: #ffffff;
+}
+
 
 .ui.header .header-links {
   display: flex;
@@ -224,13 +227,6 @@
 
 .dark .ui.main-head > .logo > img {
   content: url("http://cmsredesign.channeli.in/library/assets/images/IITRLogo.png");
-}
-
-@media only screen and (min-width: 1024px) {
-  .ui.header>.ui.main-head {
-    display: flex;
-    justify-content: center;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -392,30 +388,4 @@
     margin-left: 0rem;
     gap: 15%;
   }
-}
-
-
-.ui.header > .upper-head {
-  /* todo: add variable */
-  background-color: #3c3c3c;
-}
-/* todo: rework dark mode */
-.dark .ui.header {
-  background-color: var(--menu-black);
-}
-.dark .ui.header > .upper-head {
-  background-color: var(--primary);
-}
-.ui.header > .upper-head > .left-container > a {
-  color: var(--white);
-}
-
-.ui.header > .upper-head > .right-container > .accessibility > .sizechange > div > img,
-.ui.header > .upper-head > .right-container > .accessibility > .page-search > img
- {
-  filter: invert(100%);
-}
-
-.ui.header > .upper-head > .right-container > .accessibility > .page-options > span > a {
-  color: var(--white) !important;
 }

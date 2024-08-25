@@ -3,11 +3,9 @@
 
 .menuContainer div.flexbox a > div > div,
 .menuContainer div.flexbox a > div {
-  /* color: var(--black) !important; */
+  color: var(--black) !important;
   font-family: var(--font-lato);
 }
-
-
 
 div.flexbox .menuItem {
   margin: 0;
@@ -37,7 +35,7 @@ div.flexbox .menuItem {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    /* margin-top: 1rem; */
+    margin-top: 1rem;
     /* margin-top:1rem; */
   }
 
@@ -57,7 +55,7 @@ div.flexbox .menuItem {
     font-weight: bold;
   }
   .menuContainer div.flexbox a {
-    /* color: var(--black); */
+    color: var(--black) !important;
     font-family: var(--font-lato) !important;
     font-size: 15px !important;
     text-decoration: none;
@@ -69,11 +67,7 @@ div.flexbox .menuItem {
     max-width: 200px !important;
   }
   div.flexbox > .menuItem > a:hover {
-    background-color: var(--primary);
-  }
-  div.flexbox > .menuItem:has( ul.visible) > a{
-    background-color: var(--primary);
-    color: var(--black);
+    background-color: var(--grey-blue);
   }
   .menuContainer div.flexbox > .menuItem {
     position: relative !important;
@@ -100,7 +94,7 @@ div.flexbox .menuItem {
     overflow: visible;
   }
   div.flexbox > .menuItem .menuItem {
-    background-color: var(--primary);
+    background-color: var(--grey-blue);
     min-width: 200px;
   }
   div.flexbox > .menuItem .menuItem a {
@@ -114,7 +108,7 @@ div.flexbox .menuItem {
     transform: scaleX(0);
     left: 102%;
     top: 0%;
-    background-color: var(--primary);
+    background-color: var(--grey-blue);
     transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s,
       left 0s linear 0.01s;
     font-weight: normal !important;
@@ -130,14 +124,6 @@ div.flexbox .menuItem {
     height: max-content;
     display: flex;
     padding: 0px !important;
-  }
-
-  /* todo: dark mode rework */
-  .dark div.flexbox > .menuItem > ul .menuItem > a > div {
-    color: var(--white) !important;
-  }
-  .dark div.flexbox > .menuItem > ul .menuItem > a > div > .ui.intro-text {
-    color: var(--white) !important; 
   }
 
   div.flexbox > .menuItem > ul .menuItem > a {
@@ -177,38 +163,14 @@ div.flexbox .menuItem {
   .div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
     display: block;
   }
-  div.flexbox > .menuItem:hover div.flexbox > .menuItem > ul,
-  .div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
-    display: block;
-  }
   .accessibility-hamburger,
   .contact {
     display: none;
   }
-  .menuContainer {
-    /* todo: make variable */
-    background-color: var(--menu-black);
-  }
-
-  /* todo: rework dark mode */
-  .light div.flexbox > .menuItem > a > div > div.ui.intro-text {
-    color: var(--white);
-  }
-  div.flexbox > .menuItem:hover > a > div > div.ui.intro-text,
-  div.flexbox > .menuItem:active > a > div > div.ui.intro-text {
-    color: var(--black);
-  }
-  .dark div.flexbox > .menuItem:hover > a > div > div.ui.intro-text,
-  .dark div.flexbox > .menuItem:active > a > div > div.ui.intro-text {
-    color: var(--white);
-  }
-  .menuItem > a > div > img {
-    filter: invert(100%);
-  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .menuContainer div.flexbox a {
-    /* color: var(--black); */
+    color: var(--black);
     font-family: var(--font-lato);
     font-size: 11px !important;
     text-decoration: none;
@@ -238,7 +200,7 @@ div.flexbox .menuItem {
     display: block;
   }
   .menuContainer div.flexbox a {
-    /* color: var(--black); */
+    color: var(--black);
     text-decoration: none;
     display: block;
     padding-bottom: 10px;
@@ -308,7 +270,7 @@ div.flexbox .menuItem {
     font-weight: normal;
     font-size: 13px;
     line-height: 19px;
-    /* color: rgba(0, 0, 0, 0.6); */
+    color: rgba(0, 0, 0, 0.6);
   }
 
   div.flexbox > .menuItem > ul div > ul.parentVisible > div > a::before {
@@ -350,7 +312,7 @@ div.flexbox .menuItem {
   div.flexbox > .menuItem > ul .menuItem > a > div {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-    /* color: rgba(0, 0, 0, 0.6) !important; */
+    color: rgba(0, 0, 0, 0.6) !important;
   }
   div.flexbox > .menuItem > a > div.icon-typography {
     padding: 0 !important;
