@@ -1,7 +1,6 @@
 .ui.flexbox {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .ui.flexbox > div {

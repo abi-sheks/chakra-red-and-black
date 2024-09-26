@@ -15,7 +15,7 @@
 
 /* todo: revamp dark mode */
 .dark .title-bar > div {
-    color: var(--primary);
+    color: var(--heading-black);
 }
 .dark .full-width-container.bg-yellow > .title-bar > div {
     color: var(--white);

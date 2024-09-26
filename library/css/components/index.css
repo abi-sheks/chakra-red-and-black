@@ -72,9 +72,25 @@ body {
     background-color: var(--very-gery-blue);
   }
   .bg-yellow {
-    background-color: var(--primary);
+    background-color: var(--bg-yellow);
+  }
+  .bg-green {
+    background-color: var(--bg-green);
   }
   .black { 
     background-color: var(--black);
   }
-  
+  .bg-noticeboard{
+    background-color: var(--bg-noticeboard);
+  }
+  .bg-lightBlue{
+    background-color: var(--bg-lightBlue);
+  }
+  .bg-black{
+    background-color: var(--bg-black);
+  }
+
+  .notice-bg{
+    background-color: var(--notice-bg);
+  }
+ 

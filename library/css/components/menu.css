@@ -3,14 +3,15 @@
 
 .menuContainer div.flexbox a > div > div,
 .menuContainer div.flexbox a > div {
-  color: var(--black) !important;
+  color: white !important;
   font-family: var(--font-lato);
 }
 
 div.flexbox .menuItem {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   z-index: 5;
+  
 }
 
 .more {
@@ -35,7 +36,8 @@ div.flexbox .menuItem {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    margin-top: 1rem;
+    margin-top: 0rem;
+    background-color: var(--header-bg);
     /* margin-top:1rem; */
   }
 
@@ -50,6 +52,7 @@ div.flexbox .menuItem {
   }
   .menuItem > a {
     display: block;
+   
   }
   .menuItem > a:hover {
     font-weight: bold;
@@ -67,7 +70,7 @@ div.flexbox .menuItem {
     max-width: 200px !important;
   }
   div.flexbox > .menuItem > a:hover {
-    background-color: var(--grey-blue);
+    background-color: black;
   }
   .menuContainer div.flexbox > .menuItem {
     position: relative !important;
@@ -92,9 +95,10 @@ div.flexbox .menuItem {
     max-width: 100%;
     top: unset;
     overflow: visible;
+    background-color: black;
   }
   div.flexbox > .menuItem .menuItem {
-    background-color: var(--grey-blue);
+    background-color: black;
     min-width: 200px;
   }
   div.flexbox > .menuItem .menuItem a {
@@ -108,10 +112,11 @@ div.flexbox .menuItem {
     transform: scaleX(0);
     left: 102%;
     top: 0%;
-    background-color: var(--grey-blue);
+    background-color: black;
     transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s,
       left 0s linear 0.01s;
     font-weight: normal !important;
+
   }
   /* menuParentNode */
   div.flexbox > .menuItem > ul .menuItem > a {
@@ -124,6 +129,7 @@ div.flexbox .menuItem {
     height: max-content;
     display: flex;
     padding: 0px !important;
+    
   }
 
   div.flexbox > .menuItem > ul .menuItem > a {
@@ -135,6 +141,7 @@ div.flexbox .menuItem {
   div.flexbox > .menuItem > ul .menuItem.activeParentNode {
     text-decoration: underline;
     position: relative;
+    
   }
   div.flexbox > .menuItem > ul .menuItem > a > div > img {
     display: none;
@@ -234,6 +241,7 @@ div.flexbox .menuItem {
   .menuContainer div.flexbox.navbarVisible {
     margin-top: 0px;
     transform: transLateX(0%);
+    background-color: black;
   }
   /* Vertical List */
   div.flexbox > .menuItem > ul {
