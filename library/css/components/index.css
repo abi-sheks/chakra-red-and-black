@@ -93,4 +93,7 @@ body {
   .notice-bg{
     background-color: var(--notice-bg);
   }
+  .bg-red{
+    background-color: var(--bg-red);
+  }
  

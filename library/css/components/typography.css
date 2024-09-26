@@ -97,7 +97,13 @@
 }
 
 .ui.intro-text {
-  color: var(--black);
+  color: white;
+  font-weight: 400;
+  /* padding: 1rem 0; */
+  line-height: 1.2rem;
+}
+.ui.intro-text1{
+  color: black;
   font-weight: 400;
   /* padding: 1rem 0; */
   line-height: 1.2rem;

@@ -33,7 +33,7 @@
 
 /* todo: rework dark mode  */
 .light .ui.rank-card .sub-heading {
-    text-shadow: 5px 5px var(--primary);
+    text-shadow: 5px 5px rgba(117, 0, 20, 0.4);
 }
 
 @media only screen and (max-width: 768px) {

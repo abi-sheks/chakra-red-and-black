@@ -82,7 +82,7 @@
 .ui.tabs-container.primary > .tabs > .tab.active {
   /* color: var(--white); */
   /* background-color: var(--formal-blue); */
-  color: black;
+  color: white;
   background-color: var(--primary);
 }
 
@@ -150,7 +150,7 @@
 .ui.tabs-container.event > .tabs > .tab.active
 {
   background-color: var(--primary);
-  color: var(--black);
+  color: white;
 }
 .ui.tabs-container.event > .contents {
   width: 70%;

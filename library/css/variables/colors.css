@@ -12,15 +12,15 @@
   --grey-blue: #f0f1f6;
   --white: #ffffff;
   --black: #232323;
-  --heading-black: #4c4c4c;
+  --heading-black: white;
   --heading-white: white;
   --grey: #666666;
   --light-grey: #f7f7f7;
-  --yellow: #ffd53d;
-  --bg-yellow: #e6a600;
+  --yellow: #750014;
+  --bg-yellow:#750014;
   --bg-green:#0FFF50;
   /* --primary: #E9FF92; */
-  --primary:#ffd53d;    
+  --primary:#750014;    
   /* --primary: var(--formal-blue); */
   --bg-noticeboard:#9FE2BF;
   --caption-grey: #999999;
@@ -35,13 +35,14 @@
   --social-icon-instagram-hover-color: #e1306c;
   --social-icon-youtube-hover-color: #bb0000;
   --social-icon-telegram-hover-color:  #229ED9;
-  --header-bg:#232323;
+  --header-bg:#750014;
 
   --bg-lightBlue:#99BBD1;
-  --notice-bg: #99BBD145;
+  --notice-bg: #75001445;
   --icons-bg:black;
   --bg-black:#232323;
   --header-top:#232323;
+  --bg-red:#750014;
 
 }
 
@@ -78,8 +79,9 @@
   --bg-green:#232323;
   --header-bg:#232323;
   --bg-lightBlue:#232323;
-  --notice-bg: #99BBD145;
+  --notice-bg: #75001455;
   --header-top:#232323;
+  --bg-red:#232323;
  
 }
 
