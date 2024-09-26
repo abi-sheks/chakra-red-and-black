@@ -1,0 +1,101 @@
+.ui.slider {
+    display: grid;
+    grid-template: 1fr / 5vw 1fr 5vw;
+    max-width: 100% !important;
+    overflow: hidden;
+}
+.ui.slider > div{
+    max-width: 100%;
+}
+.ui.slider .outer-container{
+    
+    overflow: hidden;
+    display: flex; /* Add flex display to outer-container */
+    align-items: center; /* Align items horizontally */
+}
+
+
+.ui.slider .container{
+    width: 100%; 
+   
+    display: flex;
+    justify-content: space-evenly;
+    
+    align-items: center;
+    flex-wrap: nowrap; 
+}
+.ui.slider > * > *{
+    
+    margin: 10px;
+}
+.ui.slider > .left-arrow-container {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* todo: rework dark mode */
+.dark .ui.slider > .left-arrow-container > img {
+    filter: invert(100%);
+}
+
+.ui.slider > .container {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ui.slider .container > * {
+    margin-right: 40px
+}
+
+.ui.slider > .right-arrow-container {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* todo: rework dark mode */
+.dark .ui.slider > .right-arrow-container > img {
+    filter: invert(100%);
+}
+
+.ui.slider > .left-arrow-container > .arrow:hover {
+    cursor: pointer;
+}
+
+.ui.slider > .right-arrow-container > .arrow:hover {
+    cursor: pointer;
+}
+
+.ui.slider .image-card {
+    background-color: var(--black);
+}
+
+/* todo: rework dark mode  */
+.dark .ui.slider .image-card {
+    background-color: var(--white);
+}
+.dark .ui.slider .image-card > .content > .intro-text, 
+.dark .ui.slider .image-card > .content > .sub-heading 
+{
+    color: var(--black);
+}
+
+.ui.slider .image-card .content .sub-heading {
+    font-weight: 600;
+    color: var(--white);
+    opacity: 0.87;
+}
+
+.ui.slider .image-card .content .intro-text {
+    font-weight: 400;
+    color: var(--light-grey);
+    opacity: 0.8;
+}
+
+.ui.slider .image-card .content a {
+    display: none;
+}

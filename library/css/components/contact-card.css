@@ -1,0 +1,33 @@
+.ui.contact-card {
+  width: var(--contact-card-width);
+  height: var(--contact-card-height);
+  padding: 1.6rem 0;
+  box-sizing: border-box;
+  max-width: 95vw;
+}
+
+.ui.contact-card .section-heading {
+  margin-bottom: 3rem;
+}
+
+.ui.contact-card .social {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.ui.contact-card .contact-info {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+}
+
+.ui.contact-card .icon_image {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

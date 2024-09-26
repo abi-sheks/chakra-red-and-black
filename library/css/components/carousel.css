@@ -1,0 +1,231 @@
+.ui.carousel {
+  position: relative;
+}
+
+.ui.carousel > .ui.image {
+  display: none;
+}
+
+.ui.carousel > .ui.image > .numbertext {
+  color: var(--white);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: 0.5rem;
+}
+
+.ui.carousel > .image.fluid > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%; /* use auto if don't want to scale up image height */
+  width: auto;
+  min-height: 10vw;
+  max-width: 100%;
+  max-height: 40vw;
+  display: block;
+  z-index: 1;
+  cursor: pointer !important;
+}
+
+.ui.carousel > .flexbox {
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.ui.carousel > .flexbox > .prev,
+.ui.carousel > .flexbox > .next {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.ui.carousel > .flexbox > .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.ui.carousel > .flexbox > .prev:hover,
+.ui.carousel > .flexbox > .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ui.carousel > .dot-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+  z-index: 2;
+}
+
+.ui.carousel > .dot-container > .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  /* background-color: var(--very-gery-blue); */
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.ui.carousel > .dot-container > .active,
+.ui.carousel .dot:hover {
+  background-color: var(--white);
+}
+
+.ui.carousel > .ui.image > .ui.section-heading {
+  font-size: 40px;
+  animation-name: slide-down;
+  animation-duration: 1s;
+  position: absolute;
+  padding-top: 5px;
+  left: 20vw;
+  top: 35%;
+  width: 50%;
+  height: 10%;
+  word-wrap: normal;
+  z-index: 4;
+  overflow: hidden;
+  font-weight: 1000;
+  font-family: serif;
+  color: white;
+}
+
+.ui.carousel > .ui.image > .ui.intro-text {
+  animation-name: slide-up;
+  animation-duration: 1s;
+  position: absolute;
+  left: 20vw;
+  top: 50%;
+  width: 40%;
+  height: 40%;
+  word-wrap: normal;
+  z-index: 5;
+  overflow: hidden;  
+  font-family: serif;
+  color: white;
+}
+
+/* Fading animation */
+.ui.carousel > .ui.image.fluid {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.ui.carousel > .ui.image.fluid > .bg-image {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 40vw;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes slide-down {
+  from {
+    top: 30%;
+  }
+  to {
+    top: 35%;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 55%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ui.carousel > .ui.image.fluid > .bg-image {
+    height: 40vw;
+  }
+
+  .ui.carousel {
+    height: 40vw;
+  }
+  .ui.carousel > .image.fluid > img {
+    display: block;
+    max-height: none;
+  }
+
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+
+  .ui.carousel > .ui.image > .ui.section-heading {
+    font-size: 20px;
+    top: 25%
+  }
+
+  .ui.carousel > .ui.image > .ui.intro-text {
+    top: 40%;
+    width: 30%;
+    height: 30%;
+    font-size: 12px;
+  }
+
+  @keyframes slide-down {
+    from {
+      top: 20%;
+    }
+    to {
+      top: 25%;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      top: 45%;
+    }
+    to {
+      top: 40%;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui.carousel > .ui.image > .ui.section-heading {
+    font-size: 12px;
+    height: 15%;
+  }
+}

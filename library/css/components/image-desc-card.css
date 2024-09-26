@@ -1,0 +1,47 @@
+.image-description-card {
+    max-width: 100%;
+    /* min-width: 600px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+.image-description-card > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: left;
+}
+
+.ui.image-description-card > .ui.image {
+    object-fit: contain;
+    overflow: hidden;
+    max-height: 30rem;
+    max-width: 50rem;
+    width: 100%;
+}
+
+.image-description-card > .info > .ui.section-heading {
+    text-transform: capitalize;
+}
+
+.image-description-card > .info > .ui.section-heading:hover {
+    cursor: pointer;
+}
+
+.image-description-card > .info > .ui.section-heading {
+    text-transform: capitalize;
+}
+.image-description-card > .info > .ui.description.left {
+    text-align: justify !important;
+}
+
+@media only screen and (max-width: 1024px) {
+    .image-description-card {
+        flex-direction: column;
+    }
+
+}

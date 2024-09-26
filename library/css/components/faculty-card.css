@@ -1,0 +1,116 @@
+.ui.faculty-card {
+  width: var(--faculty-card-width);
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  /* border: 0.0625rem solid var(--caption-grey); */
+  box-shadow: 0px 0px 3px var(--caption-grey);
+  max-width: 100%;
+  background-color: var(--white);
+}
+.ui.faculty-card > .flex {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.ui.faculty-card >.body{
+  display: flex;
+  flex-direction: column;
+}
+.ui.faculty-card >.body>.ui.link{
+  align-self: flex-end;
+}
+
+.ui.faculty-card .name {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: var(--black);
+  margin-bottom: 0.3125rem;
+}
+.ui.faculty-card .designation {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.02em;
+  color: var(--caption-grey);
+  margin-bottom: 1.0625rem;
+}
+.ui.faculty-card .info-content {
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  margin-bottom: 1.125rem;
+  color: var(--faculty-card-info-color);
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  text-overflow: ellipsis; 
+  word-break: break-all;
+}
+
+.ui.faculty-card > .body > .description {
+  height: 5.5rem;
+}
+.ui.faculty-card > .body > .description {
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: var(--black);
+  margin-top: 1.5rem;
+  overflow-x: hidden;
+  max-height: 90px;
+}
+@media only screen and (max-width:1000px){
+  .ui.faculty-card > .flex > div.ui.image img {
+    min-width: 7rem;
+    max-width: 10rem;
+  }
+}
+@media  screen and (min-width:1000px) {
+  .ui.faculty-card > .flex > div.ui.image img {
+    max-width: 10rem;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .ui.faculty-card > .flex > div.ui.image img {
+    height: 120px;
+    width: 100px;
+  }
+  .ui.faculty-card > .flex {
+    flex-direction: column;
+  }
+  .ui.faculty-card >.flex>.info>.name,.designation{
+    text-align: center;
+  }
+
+
+}
+
+@media only screen and (min-width: 630px) {
+  .ui.faculty-card > .body > .ui.link {
+    display: flex;
+    margin-top: 1.625rem;
+  }
+
+}
+@media only screen and (max-width: 600px) {
+  .ui.faculty-card {
+    padding: 0.5rem;
+  }
+  .ui.faculty-card > .flex {
+    gap: 0.5rem;
+  }
+  .ui.faculty-card .body > .description {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .ui.faculty-card .info {
+    max-width: 100%;
+  }
+  .ui.faculty-card .info .ui.intro-text {
+    font-size: 13px;
+  }
+}

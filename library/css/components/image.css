@@ -1,0 +1,51 @@
+.ui.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.ui.image:hover {
+  cursor: pointer;
+}
+
+.ui.fluid.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.ui.fluid.image > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.ui.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* For use as a child in containers*/
+
+.ui.full-width-container > .ui.image{
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.first, .second > .ui.image{
+  width: auto;
+  height: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .ui.image > img {
+    max-width: 70vw;
+  }
+  .ui.fluid.image > img {
+    max-width: 100%;
+  }
+}

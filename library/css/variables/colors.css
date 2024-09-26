@@ -1,0 +1,95 @@
+.light {
+  --gradient-blue: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 1.04%,
+    #5183b8 30.21%,
+    #5183b8 76.56%
+  );
+  --formal-blue: #5183b8;
+  --section-blue: rgba(26, 118, 187, 0.87);
+  --bright-blue: #0067b3;
+  --light-blue: rgba(229, 238, 244, 0.49);
+  --grey-blue: #f0f1f6;
+  --white: #ffffff;
+  --black: #232323;
+  --heading-black: #4c4c4c;
+  --heading-white: white;
+  --grey: #666666;
+  --light-grey: #f7f7f7;
+  --yellow: #ffd53d;
+  --bg-yellow: #e6a600;
+  --bg-green:#0FFF50;
+  /* --primary: #E9FF92; */
+  --primary:#ffd53d;    
+  /* --primary: var(--formal-blue); */
+  --bg-noticeboard:#9FE2BF;
+  --caption-grey: #999999;
+  --hover-black: #181818;
+  --very-gery-blue: #cfdbe6;
+  --dot-grey: rgba(35, 35, 35, 0.6);
+  --menu-black: #222222;
+  --footer-background:black;
+  --social-icon-facebook-hover-color: #3b5998;
+  --social-icon-twitter-hover-color: #00aced;
+  --social-icon-linkedin-hover-color: #0077b5;
+  --social-icon-instagram-hover-color: #e1306c;
+  --social-icon-youtube-hover-color: #bb0000;
+  --social-icon-telegram-hover-color:  #229ED9;
+  --header-bg:#232323;
+
+  --bg-lightBlue:#99BBD1;
+  --notice-bg: #99BBD145;
+  --icons-bg:black;
+  --bg-black:#232323;
+  --header-top:#232323;
+
+}
+
+.dark {
+  --gradient-blue: #81dbfe;
+  --formal-blue: #E1E1E1;
+  --section-blue: #E1E1E1;
+  --bright-blue:#81dbfe;
+  --light-blue: #111111;
+  --grey-blue: #4c4c4c;
+  --white: #111111;
+  --black: #eeeeee;
+  --heading-black: #E1E1E1;
+  --grey: #EEEEEE;
+  --light-grey: #111111;
+  --yellow:#E9FF92 ;
+  --icons-bg:black;
+  /* --primary: #E9FF92; */
+  --primary:#E9FF92;
+  /* --primary: #81dbfe; */
+  --caption-grey: #999999;
+  --hover-black: #f7f7f7;
+  --very-gery-blue: #4C4C4C;
+  --dot-grey: #ffffff;
+  --menu-black:black;
+  --bg-noticeboard:#9FE2BF;
+  --social-icon-facebook-hover-color: #3b5998;
+  --social-icon-twitter-hover-color: #00aced;
+  --social-icon-linkedin-hover-color: #0077b5;
+  --social-icon-instagram-hover-color: #e1306c;
+  --social-icon-youtube-hover-color: #bb0000;
+  --social-icon-telegram-hover-color:  #229ED9;
+  --footer-background:black;
+  --bg-green:#232323;
+  --header-bg:#232323;
+  --bg-lightBlue:#232323;
+  --notice-bg: #99BBD145;
+  --header-top:#232323;
+ 
+}
+
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('./ui/segoeui.eot');
+  src: local('Segoe UI'), local('Segoe'), local('Segoe WP'),
+    url('./ui/segoeui.eot?#iefix') format('embedded-opentype'),
+    url('./ui/segoeui.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

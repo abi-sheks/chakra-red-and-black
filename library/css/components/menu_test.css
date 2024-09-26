@@ -1,0 +1,369 @@
+/* Formatting and Check on Conflicting Imports */
+
+@import url('../globals/fonts.css');
+@import url('../variables/colors.css');
+
+.menuContainer nav ul>a>div>div {
+    color: var(--black) !important;
+    font-family: var(--font-lato);
+}
+.menuParentNode a>div>div{
+    color: var(--black) !important;
+    font-family: var(--font-lato) !important;
+}
+.menuParentNode>a {
+    height: max-content;
+    display: flex;
+    padding-left: 5px !important;
+    padding-bottom: 6px !important;
+}
+.menuParentNode>a>div {
+    height: max-content;
+    display: flex;
+    padding: 0px !important;
+}
+@media only screen and (min-width:1024px) {
+    
+    .menuContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    #hamBurger {
+        display: none;
+    }
+    nav.blue ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    nav.blue {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        gap: 5px;
+
+    }
+    nav.blue div {
+        max-width: 100% !important;
+    }
+    nav.blue a {
+        color: var(--black) !important;
+        font-family: var(--font-lato) !important;
+        font-size: 13px !important;
+        text-decoration: none;
+        padding: 5px;
+    }
+    nav.blue li a {
+        display: block;
+        padding: 5px;
+        padding-bottom: 6px;
+        background-position: 0px 0px;
+    }
+    /* Hover Effects (Could be Done with CSS, but JS is used) */
+    nav.blue li a:hover,
+    nav li.active a {
+        background-position: 0px -36px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    /* Special Node */
+
+    .menuContainer nav ul>a  {
+        display: block;
+        width: 100% !important;
+        max-width: 200px;
+        text-transform: uppercase !important;
+        transition: max-width 0.3s ease-out;
+    }
+    
+    .menuContainer nav ul>a:hover {
+        background-color: var(--grey-blue);
+    }
+    /* Sub-Nodes and Leaf Nodes of Special Node (Vertical Menu) */
+    .menuInnerContainer {
+        display: flex;
+        transform: scaleY(0);
+        width: 0;
+        transition: transform 0.16s ease-in-out;
+        position: relative;
+        border-radius: 2px;
+    }
+    .menuInnerContainer li {
+        background-color: var(--grey-blue);
+        min-width: 200px;
+    }
+    .menuInnerContainer li a {
+        z-index: 1000;
+        display: block;
+    }
+    /* Utils for Vertical Menu */
+    .visible {
+        transform: scaleY(1);
+        overflow: visible;
+        /* max-width: 100%; */
+        width: 100%;
+        /* Side-Menu is affected due to this :(*/
+    }
+    /* .menuInnerContainer.endInnerContainer {
+        position: static;
+    } */
+    /* Parent Nodes inside Special Node (Side-Menu) */
+    li.menuParentNode {
+        display: flex;
+    }
+    li.menuParentNode>a {
+        max-width: 100%;
+        min-width: 80%;
+        align-items: end;
+        position: relative;
+    }
+    .menuInnerContainer li>ul {
+        z-index: 1000;
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        left: 102%;
+        top: 0%;
+        background-color: var(--grey-blue);
+        transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
+        font-weight: normal !important;
+    }
+    li.menuParentNode>a>div>img {
+        display: none;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 40%;
+        right: 0%;
+        margin-left: auto;
+    }
+    /* Side Menu Utils */
+    .menuInnerContainer li>ul.parentVisible {
+        transform: scaleX(1);
+        overflow: visible;
+        position :absolute;
+    }
+
+    /* Parent Node Utils */
+    .menuParentNode.activeParentNode {
+        text-decoration: underline;
+        position: relative;
+    }
+    .menuParentNode>a>div>img.activeParentNode {
+        display: block !important;
+    }
+
+    .menuInnerContainer {
+        display: none;
+        position: absolute;
+    }
+
+     nav.blue > ul:hover .menuInnerContainer, .nav.blue > ul:active .menuInnerContainer {
+        display: block;
+
+    }
+    nav.blue > ul {
+        position: relative;
+
+    }
+
+    @media only screen and (min-width:1024px) and (max-width: 1200px) {
+        nav.blue a {
+            color: var(--black);
+            font-family: var(--font-lato);
+            font-size: 12px !important;
+            text-decoration: none;
+            padding: 5px;
+        }
+    }
+    .accessibility-hamburger,
+    .contact {
+        display: none;
+    }
+}
+
+
+/*Smaller PC Screens*/
+
+@media only screen and (max-width: 1024px) {
+    * {
+        box-sizing: border-box;
+    }
+    /* Core Containers */
+    .menuContainer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menuParentNode >a>div>div{
+        padding-left: 5px !important;
+    }
+    /* Hamburger (First-Child) */
+
+    /* Navbar (as Sidebar) Second-Child */
+    /* Refactor Built-In Styles  */
+    nav.blue ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    nav.blue a {
+        color: var(--black);
+        text-decoration: none;
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-position: 0px 0px;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+    /* Nav Utils */
+    nav.blue {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        z-index: 1000;
+        transform: transLateX(-150%);
+        transition: transform 0.3s ease-in;
+        background-color:  var(--white);
+        padding-left: 0.5rem;
+        border: 2px solid black;
+    }
+    nav.blue li a:hover,
+    nav li.active a {
+        background-position: 0px -36px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    nav.blue.navbarVisible {
+        transform: transLateX(0%);
+    }
+    /* Individual Node Containers */
+    .menuInnerContainer {
+        z-index: 10000;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        background-color: var(--grey-blue);
+        position: absolute;
+    }
+    .menuInnerContainer li {
+        min-width: 200px;
+    }
+    .menuInnerContainer li a {
+        z-index: 1000;
+        display: block;
+        padding-left: 9px;
+        margin-left: 5px;
+    }
+    /* Transitions */
+    .menuInnerContainer.visible {
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        top: 0%;
+        min-width: max-content;
+        min-height: max-content;
+        display: flex;
+    }
+    /* Special Node */
+    .menuContainer nav ul>a  img {
+        display: none;
+    }
+    .menuContainer nav ul>a  {
+        padding: 10px;
+        text-transform: uppercase !important;
+    }
+    /* SpecialNode Utils */
+    .menuContainer nav ul>a.activeParentNode {
+        background-color: var(--grey-blue);
+    }
+    /* Parent Node */
+    .menuInnerContainer li>ul {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        transform: translateY(0);
+        transition: transform 0.3s ease-in;
+        z-index: 1000;
+    }
+    .menuParentNode>a>div>img {
+        display: none;
+    }
+    /* ParentNode Utils */
+    .menuInnerContainer li>ul.parentVisible {
+        transform: translateY(1);
+        height: 100%;
+        width: inherit;
+    }
+    .menuInnerContainer li>ul.parentVisible>li {
+        margin-left: 10px;
+    }
+    .menuInnerContainer li>ul.parentVisible>li>a {
+        font-family: Segoe UI;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    .menuInnerContainer li>ul.parentVisible>li>a::before {
+        content: "\276F";
+        margin-right: 7px;
+    }
+    .menuInnerContainer li>ul.parentVisible>li>a:hover {
+        font-weight: bold;
+    }
+    li.menuParentNode.activeParentNode>a {
+        border-left: 4px solid var(--bright-blue);
+        cursor: pointer;
+    }
+    /*Accessibility*/
+    ul.accessibility-hamburger {
+        border-top: 2px solid var(--very-gery-blue);
+        margin-top: 75px !important;
+    }
+    ul.contact {
+        border-top: 2px solid var(--very-gery-blue);
+    }
+    li.language {
+        display: flex;
+        align-items: center;
+    }
+    .accessibility-hamburger>li>a,
+    .contact>li>a {
+        padding: 10px;
+        text-transform: uppercase !important;
+    }
+    .ABox {
+        border: 2px solid var(--section-blue);
+        border-radius: 2px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ABoxFilled {
+        background-color: var(--section-blue);
+        border-radius: 2px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .accessibility-hamburger>li>div {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+    }
+}

@@ -1,0 +1,49 @@
+.ui.rank-card {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* should work on most browsers */
+.ui.flexbox:has(> .ui.rank-card) + .title-bar
+{
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.ui.rank-card .icon {
+    height: 6rem;
+    width: 6rem;
+}
+
+.ui.rank-card .intro-text {
+    color: var(--black) !important;
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+}
+
+.ui.rank-card .sub-heading {
+    font-family: var(--font-lato);
+    font-size: 70px;
+    font-weight: 900;
+}
+
+/* todo: rework dark mode  */
+.light .ui.rank-card .sub-heading {
+    text-shadow: 5px 5px var(--primary);
+}
+
+@media only screen and (max-width: 768px) {
+    .ui.flexbox:has(> .ui.rank-card) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ui.flexbox:has(> .ui.rank-card) + .title-bar
+    {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}

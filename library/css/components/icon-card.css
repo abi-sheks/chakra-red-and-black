@@ -1,0 +1,13 @@
+.ui.icon-card {
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 20rem;
+    margin: auto;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 900px) {
+    .ui.icon-card {
+        padding: 0.5rem;
+    }
+}

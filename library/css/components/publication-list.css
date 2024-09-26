@@ -1,0 +1,26 @@
+.ui.publication-list {
+  padding-top: 1.5rem;
+}
+.ui.publication-list > .publicationListItem {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+}
+
+
+.ui.publication-list > .publicationListItem .ui.intro-text {
+  padding: 0.25rem 0 0.25rem 0;
+}
+
+.ui.publication-list > .publicationListItem > .title-bar {
+  padding: 0;
+}
+
+.ui.publication-list > .publicationListItem .ui.intro-text {
+  padding: 0;
+}
+.ui.publication-list > .publicationListItem hr {
+  border-width: 0.125rem;
+}

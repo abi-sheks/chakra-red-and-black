@@ -1,0 +1,99 @@
+.ui.quote-card {
+    margin:2.625rem 6rem 10rem 6rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    /* background-color: var(--white); */
+}
+
+.ui.quote-card > .quote {
+    display: flex;
+    flex-direction: column;
+    padding: 3.125rem 2.5625rem 2rem;
+    align-items: flex-start;
+    border: 2px solid var(--very-gery-blue);
+    border: 2px solid var(--very-gery-blue);
+    border-radius: 4px;
+    /* background-color: var(--very-gery-blue); */
+}
+
+.ui.quote-card > .quote > .link{
+    margin: 0px, 0px, 0px, 0px;
+}
+
+.ui.quote-card > .quote > .link:hover{
+    text-decoration: underline;
+}
+
+.ui.quote-card > .icon_image {
+    margin-top: 0px;
+    padding-left: 5.5rem;
+    width: 46px;
+    height: 26px;
+}
+
+.ui.quote-card > .profile > .ui.image > img {
+    border-radius: 50%;
+    padding-right: 1rem;
+    height: 111px;
+    width: 111px;
+}
+
+.ui.quote-card > .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    padding-left: 3.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ui.quote-card > .profile > .info > .ui.sub-heading {
+    padding-bottom: 2px;
+}
+.ui.quote-card > .profile > .info > .ui.one-liner-captions {
+    padding-top: 2px;
+}
+ 
+@media screen and (max-width: 500px) {
+    .ui.quote-card {
+        margin:2rem 3rem 12rem 3rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        align-items: center;
+    }
+    .ui.quote-card .ui.icon.icon_image {
+        padding-right: 6rem;
+    }
+    .ui.quote-card .profile {
+        width: 100%;    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0rem;
+        padding-left: 0px;
+    }
+    .ui.quote-card .info {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .ui.quote-card {
+        margin:2rem 3rem 14rem 3rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        align-items: center;
+    }
+    .ui.quote-card > .ui.icon.icon_image {
+        padding-right: 6rem;
+    }
+    .ui.quote-card .profile{
+        display: flex;
+    }
+}

@@ -1,0 +1,28 @@
+.title-bar{
+    display: flex;
+    flex-direction: row;
+    /* Margin should come from container*/
+    /* margin: 0vh 10vw; */
+    padding: 1.6rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-bar > .ui.link.blue {
+    margin: 0;
+    width:auto;
+}
+
+/* todo: revamp dark mode */
+.dark .title-bar > div {
+    color: var(--heading-black);
+}
+.dark .full-width-container.bg-yellow > .title-bar > div {
+    color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+    .title-bar > * {
+        font-size: 1rem;
+    }
+}

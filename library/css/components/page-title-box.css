@@ -1,0 +1,11 @@
+.ui.title-box > .ui.breadcrumb {
+  margin-bottom: 4rem;
+}
+
+.ui.title-box > .ui.breadcrumb > .ui.link > .link-content {
+  font-weight: 400;
+}
+
+.ui.title-box > .ui.section-heading {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,96 @@
+@import url(./bread-crumbs.css);
+@import url(./faculty-card.css);
+@import url(./description-card.css);
+@import url(./normal-accordion.css);
+@import url(./image-accordion.css);
+@import url(./tabs.css);
+@import url(./flexbox.css);
+@import url(./description.css);
+@import url(./image.css);
+@import url(./numbered-list.css);
+@import url(./publication-list.css);
+@import url(./complete-info-card.css);
+@import url(./link.css);
+@import url(./stats-card.css);
+@import url(./half-width-container.css);
+@import url(./sixty-forty-container.css);
+@import url(./eighty-twenty-container.css);
+@import url(./bulleted-list.css);
+@import url(./quote-card.css);
+@import url(./table.css);
+@import url(./numbered-card.css);
+@import url(./contact-card.css);
+@import url(./social-icon.css);
+@import url(./full-width-container.css);
+@import url(./typography.css);
+@import url(./list.css);
+@import url(./image-card.css);
+@import url(./icon-card.css);
+@import url(./slider.css);
+@import url(./header.css);
+@import url(./floating-button.css);
+@import url(./title-bar.css);
+@import url(./carousel.css);
+@import url(./notice-item.css);
+@import url(./text-card.css);
+@import url(./iframe.css);
+@import url(./event-item.css);
+@import url(./image-desc-card.css);
+@import url(./profile-paceholder.css);
+@import url(./page-title-box.css);
+@import url(./footer.css);
+@import url(./gallery.css);
+@import url(./menu.css);
+@import url(./nested-vertical-list.css);
+@import url(./faculty-profile.css);
+@import url(./rank-card.css);
+@import url(./carousel-stats.css);
+@import url(./image-grid.css);
+
+/* @import url(./menu_test.css); */
+
+/* These are the background colors for all containers*/
+body {
+  background-color: var(--white);
+}
+.white {
+    background-color: var(--white);
+  }
+  
+  .gradient-blue {
+    background-color: var(--gradient-blue);
+    background-image: var(--gradient-blue);
+  }
+  
+  .light-blue {
+    background-color: var(--light-blue);
+  }
+  .light-grey {
+    background-color: var(--light-grey);
+  }
+  .blue-grey {
+    background-color: var(--very-gery-blue);
+  }
+  .bg-yellow {
+    background-color: var(--bg-yellow);
+  }
+  .bg-green {
+    background-color: var(--bg-green);
+  }
+  .black { 
+    background-color: var(--black);
+  }
+  .bg-noticeboard{
+    background-color: var(--bg-noticeboard);
+  }
+  .bg-lightBlue{
+    background-color: var(--bg-lightBlue);
+  }
+  .bg-black{
+    background-color: var(--bg-black);
+  }
+
+  .notice-bg{
+    background-color: var(--notice-bg);
+  }
+ 

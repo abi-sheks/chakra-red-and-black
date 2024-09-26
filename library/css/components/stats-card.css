@@ -1,0 +1,14 @@
+.ui.stats-card {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ui.carousel-stats > .ui.flexbox > .ui.stats-card {
+    padding: 0rem;
+    justify-content: center;
+}
+

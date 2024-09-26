@@ -1,0 +1,17 @@
+:root {
+    --faculty-card-width: 32rem;
+    --description-card-width: 28rem;
+    --description-card-height: 28.125rem;
+    --accordion-arrow-size: 8px;
+    --image-accordion-arrow-size: 0.8rem;
+    --tabs-font-size: 1.1rem;
+    --tabs-mobile-font-size: 1rem;
+    --tabs-secondary-font-weight: 300;
+    --tabs-secondary-active-font-weight: 400;
+    --numbered-card-width: 335px;
+    --numbered-card-number-font-size: 3.75rem;
+    --numbered-card-title-font-size: 1.25rem;
+    --contact-card-width: 35.8125rem;
+    --contact-card-height: 33.5rem;
+    --image-card-width: 22.75rem;
+}

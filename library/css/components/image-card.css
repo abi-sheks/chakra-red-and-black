@@ -1,0 +1,94 @@
+.ui.image-card {
+  width: var(--image-card-width);
+  position: relative;
+  height: 32rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  border: 0.0625rem solid var(--caption-grey);
+  background-color: var(--white);
+}
+
+.ui.image-card > .ui.image {
+  height: 15rem;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.ui.image-card > .content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ui.image-card > .content > .ui.sub-heading {
+  padding: 0.5rem 0rem;
+}
+
+.ui.image-card > .content > .ui.intro-text {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  word-wrap: break-word;
+  max-height: 6.1rem;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.ui.image-card > .content > .ui.button {
+  margin-top: 0.5rem;
+  position: absolute;
+  bottom: 0.9rem;
+}
+
+.ui.image-card > .content > .ui.section-heading {
+  padding: 0rem;
+  word-wrap: break-word;
+  max-height: 4.5rem;
+  overflow: hidden;
+}
+
+.ui.mini-image-card {
+  height: 10rem;
+  width: 12.5rem;
+  position: relative;
+  color: var(--white);
+}
+
+.ui.mini-image-card:hover {
+  opacity: 0.5;
+}
+
+.ui.mini-image-card > .ui.image > img {
+  height: 10rem;
+  width: 12.5rem;
+  filter: brightness(75%);
+}
+
+.ui.mini-image-card .caption {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding-right: 1rem;
+  color: #f7f7f7;
+}
+
+@media only screen and (max-width: 520px) {
+  .ui.image-card {
+    width: 17rem;
+    /* box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black); */
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    border: 0.0625rem solid var(--caption-grey);
+
+    background-color: var(--white);
+  }
+  .ui.image-card > .ui.image {
+    height: 13rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
