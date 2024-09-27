@@ -1,6 +1,6 @@
 function activateCarousel(carousel) {
   var slideIndex = 1
-  var slides = carousel.querySelectorAll('.ui.image')
+  var slides = carousel.querySelectorAll('.ui.image, .ui.video')
   var parentContainer = carousel.parentElement
   // GOT TO REMOVE PADDING AND MARGIN FROM FULL WIDTH CONTAINER MANUALLY
   // HERE! Don't change
@@ -48,8 +48,7 @@ function activateCarousel(carousel) {
       dotContainer.append(ele)
       var bgDiv = document.createElement('div')
       bgDiv.classList.add('bg-image')
-      bgDiv.style.backgroundImage =
-        'url(' + slides[i - 1].querySelector('img').src + ')'
+      bgDiv.style.backgroundImage = slides[i - 1].classList.contains('image') ? 'url(' + slides[i - 1].querySelector('img').src + ')' : 'url(' + slides[i - 1].src + ')'
       slides[i - 1].appendChild(bgDiv)
     }
     var dots = document.querySelectorAll('.dot')
@@ -91,12 +90,13 @@ function activateCarousel(carousel) {
     for (i = 0; i < dots.length; i++) {
       dots[i].classList.remove('active')
     }
-    slides[slideIndex - 1].style.display = 'contents'
+    displayStyle = slides[slideIndex - 1].classList.contains('video') ? 'block' : 'contents'
+    slides[slideIndex - 1].style.display = displayStyle
     dots[slideIndex - 1].classList.add('active')
   }
 
   setInterval(() => {
-    plusSlides(1)
+    slides[slideIndex - 1].classList.contains('video') ? plusSlides(0) : plusSlides(1)
   }, 4000)
 
 }
