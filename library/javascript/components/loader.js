@@ -5,17 +5,17 @@ const RETRY_DELAY = 2000
 let assetsToLoad = [];
 let loadedAssets = 0;
 
-const hideLoadingScreen = () => {
+function hideLoadingScreen() {
     loadingOverlay.style.display = 'none';
     document.body.classList.remove('loading');
 }
 
-const showLoadingScreen = () => {
+function showLoadingScreen() {
     loadingOverlay.style.display = 'flex';
     document.body.classList.add('loading');
 }
 
-const collectAssets = () => {
+function collectAssets() {
     const assets = [];
     document.querySelectorAll('img, video').forEach(el => {
         assets.push({
@@ -27,17 +27,17 @@ const collectAssets = () => {
     return assets;
 }
 
-const loadAsset = (asset) => {
+function loadAsset(asset) {
     return new Promise((resolve, reject) => {
         const { element, src } = asset;
 
-        const handleLoad = () => {
+        function handleLoad() {
             element.removeEventListener('load', handleLoad);
             element.removeEventListener('error', handleError);
             resolve();
         }
 
-        const handleError = () => {
+        function handleError() {
             element.removeEventListener('load', handleLoad);
             element.removeEventListener('error', handleError);
             reject();
@@ -49,20 +49,21 @@ const loadAsset = (asset) => {
             } else {
                 element.addEventListener('load', handleLoad);
                 element.addEventListener('error', handleError);
+                element.src = src + (src.includes('?') ? '&' : '?') + 'cache=' + new Date().getTime();
             }
         } else if (element.tagName === 'VIDEO') {
             if (element.readyState >= 4) {
                 resolve();
             } else {
-                element.addEventListener('loadeddata', onLoad);
-                element.addEventListener('error', onError);
+                element.addEventListener('loadeddata', handleLoad);
+                element.addEventListener('error', handleError);
                 element.load();
             }
         }
     });
 }
 
-const retryAsset = (asset) => {
+function retryAsset(asset) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             loadAsset(asset)
@@ -80,7 +81,7 @@ const retryAsset = (asset) => {
     });
 }
 
-const loadAllAssets = () => {
+function loadAllAssets() {
     const promises = assetsToLoad.map(asset =>
         loadAsset(asset)
             .catch(() => retryAsset(asset))
