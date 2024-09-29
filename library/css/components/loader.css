@@ -1,3 +1,7 @@
+body.loading > div:not(.loader) {
+    display: none;
+}
+
 .ui.loader {
     display: flex;
     flex-direction: column;

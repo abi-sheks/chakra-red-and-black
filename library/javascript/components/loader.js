@@ -1,66 +1,101 @@
+const loadingOverlay = document.getElementsByClassName('loader')[0]
+const MAX_RETRIES = 4;
+const RETRY_DELAY = 2000
+
+let assetsToLoad = [];
+let loadedAssets = 0;
 
 const hideLoadingScreen = () => {
-    const loadingOverlay = document.getElementById('loader');
-    loadingOverlay && (loadingOverlay.style.display = 'none');
+    loadingOverlay.style.display = 'none';
     document.body.classList.remove('loading');
 }
 
 const showLoadingScreen = () => {
-    const loadingOverlay = document.getElementById('loader');
-    loadingOverlay && (loadingOverlay.style.display = 'flex');
+    loadingOverlay.style.display = 'flex';
     document.body.classList.add('loading');
 }
 
 const collectAssets = () => {
     const assets = [];
-    const images = document.getElementsByClassName('image');
-    const videos = document.getElementsByClassName('video');
-
-    for (let img of images) {
-        assets.push({ type: 'image', src: img.src });
-    }
-
-    for (let video of videos) {
-        assets.push({ type: 'video', src: video.src });
-    }
+    document.querySelectorAll('img, video').forEach(el => {
+        assets.push({
+            element: el,
+            src: el.src,
+            retries: 0
+        });
+    });
     return assets;
 }
 
-const preloadAssets = (assets, callback) => {
-    let loadedAssets = 0;
-    const totalAssets = assets.length;
+const loadAsset = (asset) => {
+    return new Promise((resolve, reject) => {
+        const { element, src } = asset;
 
-    const assetLoaded = () => {
-        loadedAssets++;
-        if (loadedAssets === totalAssets) {
-            callback();
+        const handleLoad = () => {
+            element.removeEventListener('load', handleLoad);
+            element.removeEventListener('error', handleError);
+            resolve();
         }
-    }
 
-    const assetErrored = () => {
-        console.log("Failed to fetch an asset")
-    }
+        const handleError = () => {
+            element.removeEventListener('load', handleLoad);
+            element.removeEventListener('error', handleError);
+            reject();
+        }
 
-    assets.forEach(asset => {
-        if (asset.type === 'image') {
-            const img = new Image();
-            img.onload = assetLoaded;
-            img.onerror = assetErrored;
-            img.src = asset.src;
-        } else if (asset.type === 'video') {
-            const video = document.createElement('video');
-            video.oncanplaythrough = assetLoaded;
-            video.onerror = assetErrored;
-            video.src = asset.src;
-            video.load();
+        if (element.tagName === 'IMG') {
+            if (element.complete && element.naturalWidth > 0) {
+                resolve();
+            } else {
+                element.addEventListener('load', handleLoad);
+                element.addEventListener('error', handleError);
+            }
+        } else if (element.tagName === 'VIDEO') {
+            if (element.readyState >= 4) {
+                resolve();
+            } else {
+                element.addEventListener('loadeddata', onLoad);
+                element.addEventListener('error', onError);
+                element.load();
+            }
         }
     });
 }
 
+const retryAsset = (asset) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            loadAsset(asset)
+                .then(resolve)
+                .catch(() => {
+                    if (asset.retries < MAX_RETRIES) {
+                        asset.retries++;
+                        retryAsset(asset).then(resolve).catch(reject);
+                    } else {
+                        //mark as done anyway to prevent longer loading time
+                        resolve();
+                    }
+                });
+        }, RETRY_DELAY);
+    });
+}
+
+const loadAllAssets = () => {
+    const promises = assetsToLoad.map(asset =>
+        loadAsset(asset)
+            .catch(() => retryAsset(asset))
+            .then(() => {
+                loadedAssets++;
+            })
+    );
+
+    return Promise.all(promises);
+}
+
 showLoadingScreen();
-
-const assets = collectAssets();
-
-preloadAssets(assets, function () {
+assetsToLoad = collectAssets();
+loadAllAssets().then(() => {
+    hideLoadingScreen();
+}).catch(error => {
     hideLoadingScreen();
 });
