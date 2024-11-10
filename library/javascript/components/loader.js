@@ -1,5 +1,5 @@
 const loadingOverlay = document.getElementsByClassName('loader')[0]
-const MAX_RETRIES = 4;
+const MAX_RETRIES = 5;
 const RETRY_DELAY = 2000
 
 let assetsToLoad = [];
