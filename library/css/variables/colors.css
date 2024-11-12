@@ -12,7 +12,7 @@
   --grey-blue: #f0f1f6;
   --white: #ffffff;
   --black: #232323;
-  --heading-black: white;
+  --heading-black: black;
   --heading-white: white;
   --grey: #666666;
   --light-grey: #f7f7f7;
@@ -43,6 +43,7 @@
   --bg-black:#232323;
   --header-top:#232323;
   --bg-red:#750014;
+  --tab-color:white;
 
 }
 
@@ -82,6 +83,7 @@
   --notice-bg: #75001455;
   --header-top:#232323;
   --bg-red:#232323;
+  --tab-color:black
  
 }
 

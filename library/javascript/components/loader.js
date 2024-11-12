@@ -8,6 +8,7 @@ let loadedAssets = 0;
 function hideLoadingScreen() {
     loadingOverlay.style.display = 'none';
     document.body.classList.remove('loading');
+   
     document.dispatchEvent(new Event('assetsLoaded'));
 }
 

@@ -82,7 +82,7 @@
 .ui.tabs-container.primary > .tabs > .tab.active {
   /* color: var(--white); */
   /* background-color: var(--formal-blue); */
-  color: white;
+  color: var(--tab-color);
   background-color: var(--primary);
 }
 
