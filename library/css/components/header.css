@@ -36,6 +36,27 @@
  
   background-color: BLACK;
 }
+.logo {
+  position: relative;
+  width: 150px; /* Adjust based on your layout */
+  overflow: hidden; /* Ensures the image doesn't overflow during animation */
+}
+
+.logo img {
+  position: relative;
+  width: 100%; 
+  animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(-100%); /* Starts outside the left of the container */
+  }
+  to {
+      transform: translateX(0); /* Ends at its original position */
+  }
+}
+
 .divider1{
   height: 2.5px;
    background-color:black;
