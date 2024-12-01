@@ -1,0 +1,42 @@
+/* Style for the sticky social icons sidebar */
+.sticky-sidebar {
+    position: fixed;  /* Keeps the icons fixed on the side of the page */
+    top: 50%;  /* Center the icons vertically */
+    right: 0;  /* Position them on the right side */
+    transform: translateY(-50%);  /* Adjust for exact vertical centering */
+    display: flex;
+    flex-direction: column;  /* Stack the icons vertically */
+    gap: 30px;  /* Adds space between the icons */
+    z-index: 10;  /* Ensures it stays on top of other content */
+    padding-right: 10px; /* Optional: to add spacing to the right side of the sidebar */
+}
+
+/* Remove list styling */
+.sticky-sidebar ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Ensure it's stacking vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+/* Style each individual social icon */
+.sticky-sidebar ul a {
+    display: block;
+    width: 50px;  /* Icon size */
+    height: 50px;  /* Icon size */
+    background-color: black;  /* Background color for icons */
+    background-size: 60%;  /* Resize the icon inside the background */
+    background-repeat: no-repeat;  /* Prevents tiling of icons */
+    background-position: center;  /* Centers the icon inside */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Hover effect */
+}
+
+/* Specific styles for each icon (replace with actual image paths) */
+
+/* Hover effect on icons */
+.sticky-sidebar ul a:hover {
+    transform: scale(1.1);  /* Zoom in the icons slightly on hover */
+    background-color: rgba(0, 0, 0, 0.8);  /* Darker background on hover */
+}

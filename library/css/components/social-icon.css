@@ -1,12 +1,13 @@
 
 .ui.social-icon {
-    width : 26px;
-    height : 26px;
-    border-radius : 50%;
-    background-color : var(--very-gery-blue);
+    width : 30px;
+    height : 30px;
+    border-radius : 100%;
+    background-color : #92273A;
     background-repeat:no-repeat;
     background-position:center;
     display: flex;
+  
     align-items: center;
     justify-content: center;
 }

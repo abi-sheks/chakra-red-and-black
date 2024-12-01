@@ -45,7 +45,7 @@
 .logo img {
   position: relative;
   width: 100%; 
-  animation: slideIn 2s ease-out;
+  animation: slideIn 4s ease-out;
 }
 
 @keyframes slideIn {
