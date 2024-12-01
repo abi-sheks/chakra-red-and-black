@@ -1,3 +1,5 @@
+const CYCLE_TIME = 4000
+
 
 function makeid(length) {
     var result = '';
@@ -79,6 +81,47 @@ for (var i = 0; (tabsContainers !== null) && (i < tabsContainers.length); i++) {
                 tabList[0].classList += " active"
                 contentList[0].style.display = "block"
 
+
+                //do only for events gallery type tabs
+                if(tabsContainers[i].className.split(" ").indexOf("event") != -1) {
+                const tabID = tabList[0].id
+                const firstTabDetail = tabID.split('-')
+                const tabHash = firstTabDetail[1]
+                const tabIndex = firstTabDetail[3]
+
+                let activeIndex = 0;
+                let autoCycle = true;
+                let interval;
+
+                function makeTabActive(tabElement, currentContent, nextContent) {
+                    for (var j = 0; j < size; j++) {
+                        tabList[j].classList.remove('active')
+
+                    }
+                    tabElement.classList.add('active');
+                    currentContent.style.display = "none"
+                    nextContent.style.display = "block"
+                    activeIndex = Array.from(tabList).indexOf(tabElement);
+                }
+
+                function stopAutoCycle () {
+                    autoCycle = false;
+                    clearInterval(interval);
+                }
+
+                function cycleTabs() {
+                    if (!autoCycle) return;
+                    
+                    const currentActiveContent = document.getElementById(`tabs-${tabHash}-content-${activeIndex}`)
+                    activeIndex = (activeIndex + 1) % tabList.length;
+                    const nextActiveTab = document.getElementById(`tabs-${tabHash}-tab-${activeIndex}`)
+                    const nextActiveContent = document.getElementById(`tabs-${tabHash}-content-${activeIndex}`)
+                    makeTabActive(nextActiveTab, currentActiveContent, nextActiveContent);
+                }
+
+                interval = setInterval(cycleTabs, CYCLE_TIME);
+            }
+
                 // Handle click
                 for (var j = 0; j < size; j++) {
 
@@ -107,12 +150,12 @@ for (var i = 0; (tabsContainers !== null) && (i < tabsContainers.length); i++) {
                                 const targetDetail = e.target.id.split('-')
                                 const targetContent = document.getElementById(`tabs-${targetDetail[1]}-content-${targetDetail[3]}`)
                                 targetContent.style.display = "block"
+                                stopAutoCycle();
 
                             }
 
                         }
-                    })
-
+                    }) 
                 }
 
             } else {
