@@ -1,7 +1,7 @@
 
 .ui.social-icon {
-    width : 30px;
-    height : 30px;
+    width : 40px;
+    height : 40px;
     border-radius : 100%;
     background-color : #92273A;
     background-repeat:no-repeat;
@@ -12,30 +12,30 @@
     justify-content: center;
 }
 
-.ui.social-icon.facebook_icon:hover{
+.ui.social-icon.facebook_icon{
     background-color: var(--social-icon-facebook-hover-color);
 }
 
-.ui.social-icon.twitter_icon:hover{
+.ui.social-icon.twitter_icon{
     background-color: var(--social-icon-twitter-hover-color);
 }
 
-.ui.social-icon.linkedin_icon:hover{
+.ui.social-icon.linkedin_icon{
     background-color: var(--social-icon-linkedin-hover-color);
 }
 
-.ui.social-icon.instagram_icon:hover{
+.ui.social-icon.instagram_icon{
     background-color: var(--social-icon-instagram-hover-color);
 }
 
-.ui.social-icon.youtube_icon:hover{
+.ui.social-icon.youtube_icon{
     background-color: var(--social-icon-youtube-hover-color);
 }
 
-.ui.social-icon.telegram_icon:hover{
+.ui.social-icon.telegram_icon{
     background-color: var(--social-icon-telegram-hover-color);
 }
 
-.ui.social-icon.web_icon:hover{
+.ui.social-icon.web_icon{
     background-color: var(--hover-black);
 }

@@ -12,7 +12,13 @@
 }
 .ui.carousel-stats .ui.flexbox .ui.stats-card {
     position: relative;
-    transition: transform 0.3s ease; /* Smooth transition for card */
+    transition: transform 0.3s ease; 
+}
+.ui.carousel-stats .ui.flexbox .ui.stats-card {
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 2rem; /* Adds rounded corners */
+    overflow: hidden; /* Ensures content stays within the rounded corners */
 }
 
 /* Hover effect for text */
