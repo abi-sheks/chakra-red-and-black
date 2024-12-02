@@ -38,6 +38,25 @@
   margin: auto;
 }
 
+/* temporary, feature needs to be iterated */
+.ui.carousel > .ui.splash-text {
+  font-size: 56px;
+  /* animation-name: slide-down;
+  animation-duration: 1s; */
+  text-align: start;
+  position: absolute;
+  padding-top: 5px;
+  left: 10vw;
+  top: 26%;
+  width: 50%;
+  height: 50%;
+  z-index: 4;
+  overflow: hidden;
+  font-family: var(--font-lato);
+  font-weight: 800;
+  color: white;
+}
+
 .ui.carousel > .flexbox {
   justify-content: space-between;
   cursor: pointer;
@@ -182,6 +201,12 @@
   }
 }
 
+@media only screen and (min-width: 780px) and (max-width: 1000px) {
+  .ui.carousel > .ui.splash-text {
+    font-size: 36px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .ui.carousel > .ui.image.fluid > .bg-image {
     height: 40vw;
@@ -203,6 +228,11 @@
 
   .ui.carousel > .ui.image > .ui.section-heading {
     font-size: 20px;
+    top: 25%
+  }
+
+  .ui.carousel > .ui.splash-text {
+    font-size: 18px;
     top: 25%
   }
 
