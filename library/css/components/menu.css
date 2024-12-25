@@ -236,7 +236,8 @@ div.flexbox .menuItem {
     justify-content: start;
   }
   .menuContainer div.flexbox > .menuItem > a.activeParentNode {
-    background-color: var(--grey-blue);
+    background-color:var(--primary);
+    
   }
   .menuContainer div.flexbox.navbarVisible {
     margin-top: 0px;
@@ -326,7 +327,7 @@ div.flexbox .menuItem {
     padding: 0 !important;
   }
   .menuContainer div.flexbox > .menuItem > a > div > div {
-    padding-right: 2rem !important;
+    padding-right: 1rem !important;
   }
   div.flexbox > .menuItem > ul .menuItem.activeParentNode > a {
     border-left: 4px solid var(--bright-blue);
