@@ -11,9 +11,9 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   margin-bottom: 50px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   padding: 0rem 2rem;
 }
 
@@ -235,7 +235,7 @@
 .madebylabel {
   line-height: 24px;
   margin-top: 2rem;
-  margin-top: 2rem;
+  
   color: white;
 }
 .link1{
@@ -440,6 +440,11 @@
     align-items: center;
     text-align: center !important;
     font-size: 24px;
+  }
+  .madebylabel{
+    margin:auto;
+    margin-top: 30px;
+
   }
 }
 
