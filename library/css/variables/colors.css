@@ -36,7 +36,6 @@
   --social-icon-youtube-hover-color: #bb0000;
   --social-icon-telegram-hover-color:  #229ED9;
   --header-bg:#750014;
-
   --bg-lightBlue:#99BBD1;
   --notice-bg: #75001445;
   --icons-bg:black;
@@ -61,9 +60,8 @@
   --light-grey: #111111;
   --yellow:#E9FF92 ;
   --icons-bg:black;
-  /* --primary: #E9FF92; */
   --primary:#E9FF92;
-  /* --primary: #81dbfe; */
+  --bg-yellow:#da9100 ;
   --caption-grey: #999999;
   --hover-black: #f7f7f7;
   --very-gery-blue: #4C4C4C;
@@ -83,6 +81,7 @@
   --notice-bg: #75001455;
   --header-top:#232323;
   --bg-red:#232323;
+  --bg-black:#111111;
   --tab-color:black
  
 }
