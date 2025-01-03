@@ -173,15 +173,7 @@ const paths = {
   website :'library/assets/icons/website.svg',
   accessibility_telegram_logo: 'library/assets/icons/accessibility-telegram.svg', // Remove option from frontend
   telegram_logo: 'library/assets/icons/telegram-logo.svg',
-  leftarrow: 'library/assets/icons/left-arrow.svg',
-  architecture: 'library/assets/icons/architecture.svg',
-  engineering: 'library/assets/icons/engineering.svg',
-  india_gate: 'library/assets/icons/india_gate.svg',
-  globe: 'library/assets/icons/globe.svg',
-  accessibility_architecture: 'library/assets/icons/accessibility_architecture.svg',
-  accessibility_engineering: 'library/assets/icons/accessibility_engineering.svg',
-  accessibility_india_gate: 'library/assets/icons/accessibility_india_gate.svg',
-  accessibility_globe: 'library/assets/icons/accessibility_globe.svg'
+  leftarrow: 'library/assets/icons/left-arrow.svg'
 }
 
 /* <img class="ui icon" data-icon=""/> */
@@ -208,9 +200,7 @@ function getAccessibility(icons) {
 }
 
 function hover(element) {
-  // var src = 'https://cmsredesign.channeli.in/'
-  var src = './'
-
+  var src = 'https://cmsredesign.channeli.in/'
 
   let key = element.getAttribute('data-icon')
   let path = paths[key]
@@ -233,9 +223,7 @@ function hover(element) {
 var loadedIconLibrary = true
 
 function unhover(element) {
-  // var src = 'https://cmsredesign.channeli.in/'
-  var src = './'
-
+  var src = 'https://cmsredesign.channeli.in/'
 
   const key = element.getAttribute('data-icon')
   // var src = '../../'
@@ -269,8 +257,7 @@ function loadIcons() {
   getAccessibility(documentIcons);
 
   for (let i = 0; i < x; i++) {
-    // var src = 'https://cmsredesign.channeli.in/'
-    var src = './'
+    var src = 'https://cmsredesign.channeli.in/'
 
     const icon = documentIcons[i]
     const key = icon.getAttribute('data-icon')
