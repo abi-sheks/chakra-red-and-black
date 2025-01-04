@@ -63,7 +63,7 @@
 
 .ui.sub-heading {
   line-height: 1.3rem;
-  color: white;
+  color: var(--heading-black);
   font-size: 1.25rem;
   /* padding: 1.25rem 0; */
 }
@@ -84,7 +84,7 @@
 
 
 .ui.one-liner-captions {
-  color:white;
+  color:var(--heading-black);
   line-height: 1.3rem;
   font-size: 1.25rem;
   /* padding: 1rem 0; */
