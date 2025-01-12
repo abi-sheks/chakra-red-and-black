@@ -1,5 +1,7 @@
 .ui.carousel-stats {
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .ui.carousel-stats > .ui.flexbox {
@@ -9,11 +11,8 @@
     bottom: 2rem;
 }
 
-.ui.carousel-stats  > .ui.flexbox > .ui.stats-card {
-    height : 9.75rem;
-    width : 13rem;
-    margin: 0rem;
-}
+
+
 
 .ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.one-liner-captions, 
 .ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.sub-heading {
@@ -41,8 +40,8 @@
 }
 
 .ui.carousel-stats .ui.flexbox .ui.stats-card img {
-    height: 5rem;
-    width: 7.625rem;
+    width: 20%;
+    aspect-ratio: 1.525;
 }
 
 
@@ -68,12 +67,22 @@
 
 
 
-@media only screen and (max-width : 800px) {
+@media only screen and (max-width : 840px) {
     /* bad fix for demo purposes, todo: write js */
     .ui.carousel-stats > .ui.flexbox {
         display: grid;
-        grid-template-rows: repeat(2, 9.75rem);
-        grid-template-columns: repeat(2, 16rem);
+        padding: 0% 10%;
+        align-self: center;
+        width: 60%;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ui.carousel-stats > .ui.flexbox > div {
+        margin: 0px;
+    }
+    .ui.carousel-stats > .ui.flexbox > .ui.stats-card {
+        width: 100%;
+        aspect-ratio: 1.3333;
     }
     .ui.carousel-stats > .ui.flexbox > .ui.stats-card:nth-child(1) {
         grid-row: 1 / 2;
@@ -90,5 +99,14 @@
     .ui.carousel-stats > .ui.flexbox > .ui.stats-card:nth-child(4) {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
+    }
+}
+
+@media only screen and (min-width: 840px)
+{
+    .ui.carousel-stats  > .ui.flexbox > .ui.stats-card {
+        height : 9.75rem;
+        width : 13rem;
+        margin: 0rem;
     }
 }

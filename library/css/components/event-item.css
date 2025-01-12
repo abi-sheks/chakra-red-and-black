@@ -19,6 +19,14 @@
     justify-content: center;
 }
 
+/* todo: rework dark mode */
+.dark .event-item > .date {
+    background-color: var(--primary);
+}
+.dark .event-item > .date > div {
+    color: var(--white);
+}
+
 .event-item > .date.inverted {
     border: 2px solid var(--white);
 }

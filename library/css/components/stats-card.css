@@ -7,3 +7,8 @@
     align-items: center;
 }
 
+.ui.carousel-stats > .ui.flexbox > .ui.stats-card {
+    padding: 0rem;
+    justify-content: center;
+}
+
