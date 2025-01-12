@@ -153,8 +153,12 @@ const numberOfCardsToDisplay = (sliderHash) => {
 
 const sliderMap = {}
 
-
-window.addEventListener("load", function (e) {
+//checks if a loader is present
+//to prevent timing issues, slider activity is then synchronized with the loader
+const doesLoaderExist = document.getElementsByClassName("loader").length > 0 
+const eventName = doesLoaderExist ? "assetsLoaded" : "load"
+const target = doesLoaderExist ? document : window
+target.addEventListener(eventName, function (e) {
   const sliders = document.querySelectorAll(".ui.slider")
   for (let i = 0; i < sliders.length; ++i) {
     const hash = makeHash(10)
@@ -224,6 +228,7 @@ window.addEventListener("load", function (e) {
     
       }
     })
+    
    
 
    
@@ -233,7 +238,7 @@ window.addEventListener("load", function (e) {
     images = container.querySelectorAll("img")
     loadedImageCounter = 0
     images.forEach(function (image) {
-      image.addEventListener("load", function (e) {
+      image.addEventListener(eventName, function (e) {
         loadedImageCounter++
         if (loadedImageCounter == images.length) {
           renderSlides(hash, sliderMap[hash])
@@ -249,6 +254,7 @@ window.addEventListener("load", function (e) {
     startAutoSlide(hash, sliderMap[hash]);
   }
 })
+
 
 
 window.addEventListener("beforeunload", function () {

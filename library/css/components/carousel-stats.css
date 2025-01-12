@@ -10,6 +10,36 @@
     position: relative;
     bottom: 2rem;
 }
+.ui.carousel-stats .ui.flexbox .ui.stats-card {
+    position: relative;
+    transition: transform 0.3s ease; 
+}
+.ui.carousel-stats .ui.flexbox .ui.stats-card {
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 2rem; /* Adds rounded corners */
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+}
+
+/* Hover effect for text */
+.ui.carousel-stats .ui.flexbox .ui.stats-card:hover .info .ui.one-liner-captions,
+.ui.carousel-stats .ui.flexbox .ui.stats-card:hover .info .ui.sub-heading {
+    transform: translateY(-10px); 
+    font-weight: bolder; 
+    color: #FFD700; 
+}
+
+
+.ui.carousel-stats .ui.flexbox .ui.stats-card:hover img {
+    transform: scale(1.2);  
+    filter: invert(50%);  
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+
+.ui.carousel-stats .ui.flexbox .ui.stats-card:hover {
+    transform: scale(1.05);  
+}
 
 
 

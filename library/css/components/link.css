@@ -24,7 +24,7 @@
 
 .ui.link.inline > .link-content {
   padding-right: 0rem;
-  color: var(--heading-black);
+  color: black;
   text-decoration: none;
 }
 .ui.link.inverted > .link-content {
@@ -33,7 +33,7 @@
 
 .link-content {
   padding-right: 1rem;
-  color: var(--heading-black);
+  color: black;
   text-decoration: none;
 }
 

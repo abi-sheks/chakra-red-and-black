@@ -1,5 +1,5 @@
 const loadingOverlay = document.getElementsByClassName('loader')[0]
-const MAX_RETRIES = 5;
+const MAX_RETRIES = 3;
 const RETRY_DELAY = 2000
 
 let assetsToLoad = [];
@@ -8,6 +8,8 @@ let loadedAssets = 0;
 function hideLoadingScreen() {
     loadingOverlay.style.display = 'none';
     document.body.classList.remove('loading');
+   
+    document.dispatchEvent(new Event('assetsLoaded'));
 }
 
 function showLoadingScreen() {

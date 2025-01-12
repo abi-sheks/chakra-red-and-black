@@ -33,7 +33,11 @@
 
 /* todo: rework dark mode  */
 .light .ui.rank-card .sub-heading {
-    text-shadow: 5px 5px var(--primary);
+    text-shadow: 5px 5px rgba(117, 0, 20, 0.4);
+}
+
+.ui.rank-card:hover {
+    animation: rise-up 0.5s forwards;
 }
 
 @media only screen and (max-width: 768px) {
@@ -47,3 +51,12 @@
         margin-top: 1rem;
     }
 }
+
+@keyframes rise-up {
+    from {
+      transform: translateZ(0);
+    }
+    to {
+      transform: translateZ(40px) scale(1.1);
+    }
+  }

@@ -197,6 +197,12 @@
   }
 }
 
+@media only screen and (min-width: 780px) and (max-width: 1000px) {
+  .ui.carousel > .ui.splash-text {
+    font-size: 36px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .ui.carousel > .ui.image.fluid > .bg-image {
     height: 40vw;
@@ -218,6 +224,11 @@
 
   .ui.carousel > .ui.image > .ui.section-heading {
     font-size: 20px;
+    top: 25%
+  }
+
+  .ui.carousel > .ui.splash-text {
+    font-size: 18px;
     top: 25%
   }
 
