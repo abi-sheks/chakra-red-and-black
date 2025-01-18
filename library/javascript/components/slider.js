@@ -31,6 +31,9 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   if (numCards < 1) {
     return;
   }
+  if(totalNumberOfCards<4){
+    return
+  }
 
   // Calculate animation step and direction
   const cardWidth = cards[0].offsetWidth;

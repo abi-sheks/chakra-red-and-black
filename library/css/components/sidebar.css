@@ -1,5 +1,5 @@
 /* Style for the sticky social icons sidebar */
-.sticky-sidebar {
+.ui.sticky-sidebar {
     position: fixed;  /* Keeps the icons fixed on the side of the page */
     top: 50%;  /* Center the icons vertically */
     right: 0;  /* Position them on the right side */
@@ -12,7 +12,7 @@
 }
 
 /* Remove list styling */
-.sticky-sidebar ul {
+.ui.sticky-sidebar ul {
     list-style: none; /* Removes default list styling */
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@
 }
 
 /* Style each individual social icon */
-.sticky-sidebar ul a {
+.ui.sticky-sidebar ul a {
     display: block;
     width: 50px;  /* Icon size */
     height: 50px;  /* Icon size */
@@ -36,7 +36,7 @@
 /* Specific styles for each icon (replace with actual image paths) */
 
 /* Hover effect on icons */
-.sticky-sidebar ul a:hover {
+.ui.sticky-sidebar ul a:hover {
     transform: scale(1.1);  /* Zoom in the icons slightly on hover */
     background-color: rgba(0, 0, 0, 0.8);  /* Darker background on hover */
 }
