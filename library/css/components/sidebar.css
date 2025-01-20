@@ -31,6 +31,9 @@
     background-repeat: no-repeat;  /* Prevents tiling of icons */
     background-position: center;  /* Centers the icon inside */
     transition: transform 0.3s ease, background-color 0.3s ease;  /* Hover effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Specific styles for each icon (replace with actual image paths) */
