@@ -38,7 +38,7 @@
 }
 
 .ui.link.blue > .link-content {
-  color: var(--section-blue);
+  color: var(--primary);
 }
 
 .ui.link.blue.inverted > .link-content {
@@ -47,13 +47,13 @@
 
 .ui.link:hover {
   text-decoration: underline !important;
-  color: var(--section-blue);
+  color: var(--primary);
   cursor: pointer;
 }
 
 .ui.button {
-  color: var(--bright-blue);
-  border: 2px solid var(--bright-blue);
+  color: var(--primary);
+  border: 2px solid var(--primary);
   box-sizing: border-box;
   border-radius: 2px;
   background-color: var(--white);
@@ -65,18 +65,18 @@
 }
 
 .ui.button:hover {
-  background-color: var(--bright-blue);
+  background-color: var(--primary);
   color: var(--white);
 }
 
 .ui.button.inverted {
-  background-color: var(--bright-blue);
+  background-color: var(--primary);
   color: var(--white);
 }
 
 .ui.button.inverted:hover {
   background-color: var(--white);
-  color: var(--bright-blue);
+  color: var(--primary);
 }
 .group-button {
   display: flex;
@@ -87,19 +87,19 @@
 
 .group-button > .ui.button {
   padding: 12px;
-  border: 2px solid var(--formal-blue);
+  border: 2px solid var(--primary);
   background-color: var(--white);
-  color: var(--formal-blue);
+  color: var(--primary);
 }
 .group-button > .ui.button.inverted:hover {
-  background-color: var(--bright-blue);
+  background-color: var(--primary);
   color: var(--white);
 }
 .group-button > .ui.button:hover {
-  color: var(--bright-blue);
+  color: var(--primary);
   background-color: var(--white);
 }
 .group-button > .ui.button.inverted {
   color: var(--white);
-  background-color: var(--formal-blue);
+  background-color: var(--primary);
 }
