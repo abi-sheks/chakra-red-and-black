@@ -6,7 +6,7 @@
   padding-right: 10%;
   box-shadow: 0px 4px 12px 0px #8686861a;
   border: 1px solid var(--white);
-  background: var(--gradient-blue);
+  background: var(--primary);
 }
 .ui.twenty-eighty-container.faculty-vertical-list .ui.table-row{
   border-bottom: 0.125rem solid var(--caption-grey) ;
@@ -19,7 +19,7 @@
   font-weight: bold;
 }
 .ui.faculty-profile .ui.twenty-eighty-container .second > .ui.button {
-  background: var(--gradient-blue);
+  background: var(--primary);
   color: white;
   border: 2px solid var(--white);
   box-sizing: border-box;
@@ -34,7 +34,7 @@
 
 .ui.faculty-profile .ui.twenty-eighty-container .second > .ui.button:hover{
   background: var(--white) !important;
-  color: var(--bright-blue);
+  color: var(--primary);
 }
 
 .ui.faculty-profile .ui.twenty-eighty-container .second .ui.description {
