@@ -37,8 +37,12 @@
   object-fit: cover;
   margin: auto;
 }
-.ui.carousel > .ui.title-bar {
+
+/* temporary, feature needs to be iterated */
+.ui.carousel > .ui.splash-text {
   font-size: 56px;
+  /* animation-name: slide-down;
+  animation-duration: 1s; */
   text-align: start;
   position: absolute;
   padding-top: 5px;
@@ -50,7 +54,7 @@
   overflow: hidden;
   font-family: var(--font-lato);
   font-weight: 800;
-  color: white !important;
+  color: white;
 }
 
 .ui.carousel > .flexbox {
