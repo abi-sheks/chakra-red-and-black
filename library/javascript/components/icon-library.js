@@ -209,7 +209,7 @@ function getAccessibility(icons) {
 
 function hover(element) {
   // var src = 'https://cmsredesign.channeli.in/'
-  var src = './'
+  var src = '../'
 
 
   let key = element.getAttribute('data-icon')
@@ -234,7 +234,7 @@ var loadedIconLibrary = true
 
 function unhover(element) {
   // var src = 'https://cmsredesign.channeli.in/'
-  var src = './'
+  var src = '../'
 
 
   const key = element.getAttribute('data-icon')
@@ -270,7 +270,7 @@ function loadIcons() {
 
   for (let i = 0; i < x; i++) {
     // var src = 'https://cmsredesign.channeli.in/'
-    var src = './'
+    var src = '../'
 
     const icon = documentIcons[i]
     const key = icon.getAttribute('data-icon')
