@@ -39,11 +39,11 @@
   margin: auto;
 }
 .ui.carousel > .ui.title-bar {
-  font-size: 56px;
+  font-size: 76px;
   text-align: center; /* Center align text */
   position: absolute;
   padding-top: 5px;
-  left: 30%; /* Center horizontally */
+  left: 20%; /* Center horizontally */
   top: 26%;
   transform: translateX(-50%); /* Perfect horizontal centering */
   width: 50%;
@@ -124,7 +124,7 @@
   animation-duration: 1s;
   position: absolute;
   padding-top: 5px;
-  left: 10vw;
+  left: 5vw;
   top: 35%;
   width: 50%;
   height: 10%;
@@ -140,7 +140,7 @@
   animation-name: slide-up;
   animation-duration: 1s;
   position: absolute;
-  left: 20vw;
+  left: 10vw;
   top: 50%;
   width: 40%;
   height: 40%;
